@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a19f2223-0d10-475e-9e6a-f4c2c3fa14f1" name="Changes" comment="comentando">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CaminhaoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CaminhaoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CarroEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CarroEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/VeiculoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/VeiculoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/ComprasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/ComprasRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VeiculosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VeiculosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VendasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VendasRepository.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="353tT2ZysQFAnyxbQ5xQpGh0V32" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Programa.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a19f2223-0d10-475e-9e6a-f4c2c3fa14f1" name="Changes" comment="" />
+      <created>1762350587767</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762350587767</updated>
+      <workItem from="1762350588486" duration="6847000" />
+      <workItem from="1762360761805" duration="6539000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="comentando" />
+    <option name="LAST_COMMIT_MESSAGE" value="comentando" />
+  </component>
+</project>
