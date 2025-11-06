@@ -4,6 +4,7 @@ import main.java.com.igor.projeto_a3.controller.FaturamentoController;
 import main.java.com.igor.projeto_a3.controller.GestaoController;
 import main.java.com.igor.projeto_a3.controller.RegistrarComprasController;
 import main.java.com.igor.projeto_a3.controller.RegistrarVendasController;
+import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
 
 import java.util.Scanner;
 
@@ -48,6 +49,7 @@ public class Programa {
                     menuComprar();
                     break;
                 case 5:
+                    System.out.println("Programa encerrado");
                     executed = false;
                     break;
             }
@@ -59,7 +61,23 @@ public class Programa {
     }
 
     private void menuVender() {
+        System.out.println("\n");
+        System.out.println("""
+                ========== VENDER VEICULOS ==========
+                1 - Vender
+                2 - Listar veiculos vendidos
+                """);
         RegistrarVendasController rvc = new RegistrarVendasController();
+
+        int opcao = sc.nextInt();
+        if(opcao == 1) {
+            System.out.println("\n");
+            rvc.venderVeiculo();
+            System.out.println("Veículo vendido com sucesso!");
+        }else if(opcao == 2){
+            System.out.println("\n");
+            rvc.listarVeiculosVendidos();
+        }
     }
 
     private void menuComprar() {

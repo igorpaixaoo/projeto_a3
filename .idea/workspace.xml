@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a19f2223-0d10-475e-9e6a-f4c2c3fa14f1" name="Changes" comment="comentando">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/FaturamentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/FaturamentoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CaminhaoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CaminhaoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CarroEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CarroEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/VeiculoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/VeiculoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/ComprasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/ComprasRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VeiculosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VeiculosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VendasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VendasRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,10 +50,24 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="projeto_a3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="projeto_a3" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -75,6 +85,7 @@
       <updated>1762350587767</updated>
       <workItem from="1762350588486" duration="6847000" />
       <workItem from="1762360761805" duration="6539000" />
+      <workItem from="1762440350915" duration="11018000" />
     </task>
     <servers />
   </component>
@@ -107,5 +118,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="comentando" />
     <option name="LAST_COMMIT_MESSAGE" value="comentando" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

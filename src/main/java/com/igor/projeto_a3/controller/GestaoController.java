@@ -175,7 +175,7 @@ public class GestaoController {
     }
 
     //método para deletar
-    public void deletar(){
+    public VeiculoEntity deletar(){
         System.out.println("\n");
         //verificando se a lista de veiculos não está vazia
         if (!veiculosRepository.veiculos.isEmpty()) {
@@ -192,6 +192,8 @@ public class GestaoController {
                 System.out.println("veiculo removido com sucesso!");
             }else if (Character.toString(opcao).equalsIgnoreCase("N")) System.out.println("Veiculo não deletado!");
         }
+
+        return null;
     }
 
     //método para alterar veiculos
