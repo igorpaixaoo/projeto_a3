@@ -9,6 +9,7 @@ public abstract class VeiculoEntity {
 	protected String placa;
 	protected Double km;
 	protected Double preco;
+    private Double precoVenda, precoCompra;
     protected Boolean vendido;
 
     //construtor
@@ -80,6 +81,22 @@ public abstract class VeiculoEntity {
 
     public void setVendido(Boolean vendido) {
         this.vendido = vendido;
+    }
+
+    public Double getPrecoVenda() {
+        return precoVenda;
+    }
+
+    public void setPrecoVenda(Double precoVenda) {
+        this.precoVenda = precoVenda;
+    }
+
+    public Double getPrecoCompra() {
+        return precoCompra;
+    }
+
+    public void setPrecoCompra(Double precoCompra) {
+        this.precoCompra = precoCompra;
     }
 
     //toString() pai

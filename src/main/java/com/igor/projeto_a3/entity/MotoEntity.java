@@ -32,7 +32,7 @@ public class MotoEntity extends VeiculoEntity{
 	
 	@Override
 	public String toString() {
-		return "modelo: " + modelo + ", cor: " + cor + ", marca: " + marca + ", placa: " + placa + ", km: "
-				+ km + ", preco: " + preco + "carenagem: " + carenagem + ", cilindragem: " + cilindragem ;
+		return "Modelo: " + modelo + ", Cor: " + cor + ", Marca: " + marca + ", Placa: " + placa + ", KM: "
+				+ km + ", Preco: " + preco + ", Carenagem: " + carenagem + ", Cilindragem: " + cilindragem;
 	}
 }

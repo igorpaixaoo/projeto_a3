@@ -30,7 +30,7 @@ public class Programa {
             4 - Comprar
             5 - Sair
             ===========================
-            Escolha uma opção
+            Escolha uma opção:
             """;
 
             System.out.println(menu);
@@ -96,7 +96,6 @@ public class Programa {
     }
 
     private void menuVeiculos(){
-        System.out.println("\n");
         System.out.println("""
             ========== VEICULOS ===========
             1 - Cadastro

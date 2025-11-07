@@ -12,6 +12,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CarroEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CarroEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/MotoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/MotoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/VeiculoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/VeiculoEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,28 +37,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Programa.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Programa.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="projeto_a3" />
@@ -86,7 +89,8 @@
       <updated>1762350587767</updated>
       <workItem from="1762350588486" duration="6847000" />
       <workItem from="1762360761805" duration="6539000" />
-      <workItem from="1762440350915" duration="13711000" />
+      <workItem from="1762440350915" duration="15280000" />
+      <workItem from="1762551104529" duration="3136000" />
     </task>
     <task id="LOCAL-00001" summary="bug RegistrarVendasController">
       <option name="closed" value="true" />

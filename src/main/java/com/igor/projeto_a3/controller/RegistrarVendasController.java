@@ -4,16 +4,16 @@ import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
 import main.java.com.igor.projeto_a3.repository.VeiculosRepository;
 import main.java.com.igor.projeto_a3.repository.VendasRepository;
 
+import java.text.NumberFormat;
+
 public class RegistrarVendasController {
     //trazendo repositórios criados na classe GestaoController
     private GestaoController gestaoController;
 
-    private Integer contVeiculos;
-    private Double precoVenda;
+    private Integer contVeiculosVendidos = 0;
 
-    public RegistrarVendasController(Integer contVeiculos, Double precoVenda) {
-        this.contVeiculos = contVeiculos;
-        this.precoVenda = precoVenda;
+    public RegistrarVendasController(Integer contVeiculosVendidos) {
+        this.contVeiculosVendidos = contVeiculosVendidos;
     }
 
     //passando como parâmetro a classe GestaoController no construtor
@@ -26,47 +26,38 @@ public class RegistrarVendasController {
     //método vender veiculo
     public void venderVeiculo(){
         //verificando se a lista de veiculos não está vazia
-        if(!gestaoController.vendasRepository.vendas.isEmpty()){
-            //buscando veiculo
-            VeiculoEntity veiculoBuscado = gestaoController.buscar();
+        //criando uma variavel do "tipo" VeiculoEntity atribuido ao método buscar() retornando um VeiculoEntity
+        VeiculoEntity veiculoBuscado = gestaoController.buscar();
 
-            //verificadno se o veiculo buscado não é nulo
-            if(veiculoBuscado != null){
-                //adicionando o veiculo vendido na lista de vendas
-                gestaoController.vendasRepository.adicionarVeiculoVendido(veiculoBuscado);
-                //removendo o veiculo buscado da lista de veiculos gerais
-                gestaoController.veiculosRepository.veiculos.remove(veiculoBuscado);
-                System.out.println("Veículo vendido com sucesso!");
-            }
-        }
+        System.out.println("Valor da venda: ");
+        //settando o preco da venda e incrementando o contador de veiculos
+        veiculoBuscado.setPrecoVenda(gestaoController.sc.nextDouble());
+        contVeiculosVendidos++;
+
+        //verificadno se o veiculo buscado não é nulo
+        //adicionando o veiculo vendido na lista de vendas
+        gestaoController.vendasRepository.adicionarVeiculoVendido(veiculoBuscado);
+        //removendo o veiculo buscado da lista de veiculos gerais
+        gestaoController.veiculosRepository.veiculos.remove(veiculoBuscado);
+        System.out.println("Veículo vendido com sucesso!");
     }
     //método listar veiculos vendidos
     public void listarVeiculosVendidos(){
-        System.out.printf("%-20s %-15s %-15s%n",
-                "MODELO", "MARCA", "PLACA");
-        System.out.println("---------------------------------------------");
+        System.out.printf("%-20s %-15s %-10s %-15s%n",
+                "MODELO", "MARCA", "PLACA", "VALOR DA VENDA");
+        System.out.println("-----------------------------------------------------------------");
+        NumberFormat nf = NumberFormat.getCurrencyInstance();
+
         //foreach na lista de veiculos
         for(VeiculoEntity v : gestaoController.vendasRepository.vendas) {
             //fortamando os atributos com o printf
-            System.out.printf("%-20s %-15s %-15s%n", v.getModelo(), v.getMarca(), v.getPlaca());
-            System.out.println("---------------------------------------------");
+            System.out.printf("%-20s %-15s %-10s %-15s%n", v.getModelo(), v.getMarca(), v.getPlaca(), nf.format(v.getPrecoVenda()));
+            System.out.println("-----------------------------------------------------------------");
         }
     }
 
-    public void setContVeiculos(Integer contVeiculos) {
-        this.contVeiculos = contVeiculos;
-    }
-
-    public Integer getContVeiculos() {
-        return contVeiculos;
-    }
-
-    public void setPrecoVenda(Double precoVenda) {
-        this.precoVenda = precoVenda;
-    }
-
-    public Double getPrecoVenda(){
-        return precoVenda;
+    public Integer getContVeiculosVendidos() {
+        return contVeiculosVendidos;
     }
 
 }

@@ -55,7 +55,6 @@ public class GestaoController {
 
     //método para cadastrar
     public void cadastrar(){
-        System.out.println("\n");
         System.out.println("1 - Cadastrar Carro | 2 - Cadastrar Moto | 3 - Cadastrar Caminhão");
         int opcao = sc.nextInt();
         sc.nextLine();
