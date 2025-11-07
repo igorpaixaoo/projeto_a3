@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a19f2223-0d10-475e-9e6a-f4c2c3fa14f1" name="Changes" comment="comentando">
+    <list default="true" id="a19f2223-0d10-475e-9e6a-f4c2c3fa14f1" name="Changes" comment="bug RegistrarVendasController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/application/Programa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/application/Programa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/GestaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/GestaoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/FaturamentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/FaturamentoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VendasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VendasRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +86,17 @@
       <updated>1762350587767</updated>
       <workItem from="1762350588486" duration="6847000" />
       <workItem from="1762360761805" duration="6539000" />
-      <workItem from="1762440350915" duration="11018000" />
+      <workItem from="1762440350915" duration="13711000" />
     </task>
+    <task id="LOCAL-00001" summary="bug RegistrarVendasController">
+      <option name="closed" value="true" />
+      <created>1762463818445</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762463818445</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +108,11 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="FILTERS">
                 <map>
                   <entry key="branch">
@@ -117,7 +132,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="comentando" />
-    <option name="LAST_COMMIT_MESSAGE" value="comentando" />
+    <MESSAGE value="bug RegistrarVendasController" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug RegistrarVendasController" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

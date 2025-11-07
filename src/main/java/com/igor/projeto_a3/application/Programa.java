@@ -4,7 +4,6 @@ import main.java.com.igor.projeto_a3.controller.FaturamentoController;
 import main.java.com.igor.projeto_a3.controller.GestaoController;
 import main.java.com.igor.projeto_a3.controller.RegistrarComprasController;
 import main.java.com.igor.projeto_a3.controller.RegistrarVendasController;
-import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
 
 import java.util.Scanner;
 
@@ -16,7 +15,10 @@ public class Programa {
     Scanner sc = new Scanner(System.in);
 
     public Programa(){
+        run();
+    }
 
+    public void run(){
         System.out.println("SISTEMA\n");
         //enquanto for true
         while(executed){
@@ -67,24 +69,34 @@ public class Programa {
                 1 - Vender
                 2 - Listar veiculos vendidos
                 """);
-        RegistrarVendasController rvc = new RegistrarVendasController();
+        //objeto RegistrarVendarController
+        RegistrarVendasController rvc = new RegistrarVendasController(gestao);
 
         int opcao = sc.nextInt();
+        //verificando opções
         if(opcao == 1) {
             System.out.println("\n");
+            //chamando o método venderVeiculo()
             rvc.venderVeiculo();
-            System.out.println("Veículo vendido com sucesso!");
         }else if(opcao == 2){
             System.out.println("\n");
+            //chamando o método listarVeiculos()
             rvc.listarVeiculosVendidos();
         }
     }
 
     private void menuComprar() {
+        System.out.println("\n");
+        System.out.println("""
+                ========== COMPRAR VEICULOS ==========
+                1 - Comprar
+                2 - Listar veiculos comprados
+                """);
         RegistrarComprasController rcc = new RegistrarComprasController();
     }
 
     private void menuVeiculos(){
+        System.out.println("\n");
         System.out.println("""
             ========== VEICULOS ===========
             1 - Cadastro

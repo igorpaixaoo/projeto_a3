@@ -5,13 +5,15 @@ import main.java.com.igor.projeto_a3.entity.CarroEntity;
 import main.java.com.igor.projeto_a3.entity.MotoEntity;
 import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
 import main.java.com.igor.projeto_a3.repository.VeiculosRepository;
+import main.java.com.igor.projeto_a3.repository.VendasRepository;
 
 import java.util.Scanner;
 
 public class GestaoController {
 
     //lista de veiculos
-    private VeiculosRepository veiculosRepository = new VeiculosRepository();
+    public VeiculosRepository veiculosRepository = new VeiculosRepository();
+    public VendasRepository vendasRepository = new VendasRepository();
 
     Scanner sc = new Scanner(System.in);
 
