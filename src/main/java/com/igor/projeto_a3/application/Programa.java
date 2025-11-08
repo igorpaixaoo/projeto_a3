@@ -22,6 +22,7 @@ public class Programa {
         System.out.println("SISTEMA\n");
         //enquanto for true
         while(executed){
+            System.out.println("\n");
             String menu = """ 
             ========== MENU ===========
             1 - Faturamento

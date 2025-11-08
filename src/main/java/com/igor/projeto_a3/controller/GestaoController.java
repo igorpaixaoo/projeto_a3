@@ -75,10 +75,13 @@ public class GestaoController {
                 carro.setPlaca(sc.nextLine());
                 System.out.println("Km: ");
                 carro.setKm(sc.nextDouble());
+                sc.nextLine();
                 System.out.println("Preco: ");
                 carro.setPreco(sc.nextDouble());
+                sc.nextLine();
                 System.out.println("Cavalos: ");
                 carro.setCavalos(sc.nextFloat());
+                sc.nextLine();
                 System.out.println("Passageiros: ");
                 carro.setPassageiros(sc.nextInt());
                 //adicionando a lista de veiculos
@@ -98,10 +101,13 @@ public class GestaoController {
                 moto.setPlaca(sc.nextLine());
                 System.out.println("Km: ");
                 moto.setKm(sc.nextDouble());
+                sc.nextLine();
                 System.out.println("Preco: ");
                 moto.setPreco(sc.nextDouble());
+                sc.nextLine();
                 System.out.println("Cilindragem: ");
                 moto.setCilindragem(sc.nextFloat());
+                sc.nextLine();
                 System.out.println("Carenagem: ");
                 moto.setCarenagem(sc.nextLine());
                 //adicionando a lista de veiculos
@@ -121,10 +127,13 @@ public class GestaoController {
                 caminhao.setPlaca(sc.nextLine());
                 System.out.println("Km: ");
                 caminhao.setKm(sc.nextDouble());
+                sc.nextLine();
                 System.out.println("Preco: ");
                 caminhao.setPreco(sc.nextDouble());
+                sc.nextLine();
                 System.out.println("Toneladas: ");
                 caminhao.setToneladas(sc.nextFloat());
+                sc.nextLine();
                 System.out.println("Cabine: ");
                 caminhao.setCabine(sc.nextLine());
                 //adicionando a lista de veiculos
@@ -135,17 +144,16 @@ public class GestaoController {
 
     //método para buscar
     public VeiculoEntity buscar(){
-        System.out.println("\n");
         //verificando se a lista de veiculos não está vazia
         if(!veiculosRepository.veiculos.isEmpty()){
             System.out.println("Buscar veiculo (placa): ");
             //atributo (placa) digitado
-            String atributoDigitado = sc.nextLine();
+            String atributoDigitado = sc.next();
 
             //iterando a lista de veículos
             for(int i = 0; i < veiculosRepository.veiculos.size(); i++){
-                /*se o atributo (placa) digitado (ignorando se é maiusculo ou minusculo) for igual ao atributo
-                da lista da posição i, retorna o veiculo buscado
+                /*se o atributo (placa) digitado (ignorando se é maiúsculo ou minúsculo) for igual ao atributo
+                da lista da posição i, retorna o veículo buscado
                 */
                 if(atributoDigitado.equalsIgnoreCase(veiculosRepository.veiculos.get(i).getPlaca())){
                     System.out.println(veiculosRepository.veiculos.get(i));
@@ -159,16 +167,16 @@ public class GestaoController {
 
     //método para listar
     public void listar(){
-        System.out.println("\n");
-        //verificando se a lista de veiculos não está vazia
+        //verificando se a lista de veículos não está vazia
         if(!veiculosRepository.veiculos.isEmpty()){
+            System.out.println("VEÍCULOS DISPONÍVEIS");
             //formatando para ficar em formato tabular com o printf()
             System.out.printf("%-20s %-15s %-15s%n",
                     "MODELO", "MARCA", "PLACA");
             System.out.println("---------------------------------------------");
             //foreach na lista de veiculos
             for(VeiculoEntity v : veiculosRepository.veiculos) {
-                //fortamando os atributos com o printf
+                //formatando os atributos com o printf
                 System.out.printf("%-20s %-15s %-15s%n", v.getModelo(), v.getMarca(), v.getPlaca());
                 System.out.println("---------------------------------------------");
             }
@@ -177,10 +185,9 @@ public class GestaoController {
 
     //método para deletar
     public VeiculoEntity deletar(){
-        System.out.println("\n");
         //verificando se a lista de veiculos não está vazia
         if (!veiculosRepository.veiculos.isEmpty()) {
-            System.out.println("Deletar veiculo");
+            System.out.println("DELETAR VEÍCULO");
             //o objeto a ser deletado vai ser retornado pelo método buscar()
             VeiculoEntity deletarVeiculo = buscar();
 
@@ -202,7 +209,7 @@ public class GestaoController {
         //verificando se a lista de veiculos não está vazia
         if(!veiculosRepository.veiculos.isEmpty()){
             System.out.println("\n");
-            System.out.println("Alterar veiculo");
+            System.out.println("ALTERAR VEICULO");
             //objeto a ser encontrado com o método buscar()
             VeiculoEntity veiculoEncontrado = buscar();
 
@@ -220,14 +227,18 @@ public class GestaoController {
                     veiculoEncontrado.setPlaca(sc.nextLine());
                     System.out.println("Km: ");
                     veiculoEncontrado.setKm(sc.nextDouble());
+                    sc.nextLine();
                     System.out.println("Preco: ");
                     veiculoEncontrado.setPreco(sc.nextDouble());
+                    sc.nextLine();
                     System.out.println("Cavalos: ");
                     //downcasting (conversão explícita da classe pai para classe filha)
                     ((CarroEntity) veiculoEncontrado).setCavalos(sc.nextFloat());
+                    sc.nextLine();
                     System.out.println("Passageiros: ");
                     //downcasting (conversão explícita da classe pai para classe filha)
                     ((CarroEntity) veiculoEncontrado).setPassageiros(sc.nextInt());
+                    sc.nextLine();
 
                 }
                 //verificando se o objeto "veiculoEncontrado" é uma instância de MotoEntity
@@ -243,14 +254,18 @@ public class GestaoController {
                     veiculoEncontrado.setPlaca(sc.nextLine());
                     System.out.println("Km: ");
                     veiculoEncontrado.setKm(sc.nextDouble());
+                    sc.nextLine();
                     System.out.println("Preco: ");
                     veiculoEncontrado.setPreco(sc.nextDouble());
+                    sc.nextLine();
                     System.out.println("Cilindragem: ");
                     //downcasting (conversão explícita da classe pai para classe filha)
                     ((MotoEntity) veiculoEncontrado).setCilindragem(sc.nextFloat());
+                    sc.nextLine();
                     System.out.println("Carenagem: ");
                     //downcasting (conversão explícita da classe pai para classe filha)
                     ((MotoEntity) veiculoEncontrado).setCarenagem(sc.nextLine());
+                    sc.nextLine();
                 }
                 //verificando se o objeto "veiculoEncontrado" é uma instância de CaminhaoEntity
                 //se for, o objeto encontrado passa a ser alterado
@@ -265,14 +280,18 @@ public class GestaoController {
                     veiculoEncontrado.setPlaca(sc.nextLine());
                     System.out.println("Km: ");
                     veiculoEncontrado.setKm(sc.nextDouble());
+                    sc.nextLine();
                     System.out.println("Preco: ");
                     veiculoEncontrado.setPreco(sc.nextDouble());
+                    sc.nextLine();
                     System.out.println("Toneladas: ");
                     //downcasting (conversão explícita da classe pai para classe filha)
                     ((CaminhaoEntity) veiculoEncontrado).setToneladas(sc.nextFloat());
+                    sc.nextLine();
                     System.out.println("Cabine: ");
                     //downcasting (conversão explícita da classe pai para classe filha)
                     ((CaminhaoEntity) veiculoEncontrado).setCabine(sc.nextLine());
+                    sc.nextLine();
                 }
             }
         }
