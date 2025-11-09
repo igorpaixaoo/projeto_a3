@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a19f2223-0d10-475e-9e6a-f4c2c3fa14f1" name="Changes" comment="bug RegistrarVendasController">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VendasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/VendasRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +87,7 @@
       <workItem from="1762572848424" duration="93000" />
       <workItem from="1762644370035" duration="820000" />
       <workItem from="1762652513612" duration="592000" />
-      <workItem from="1762722479354" duration="2371000" />
+      <workItem from="1762722479354" duration="3565000" />
     </task>
     <task id="LOCAL-00001" summary="bug RegistrarVendasController">
       <option name="closed" value="true" />
