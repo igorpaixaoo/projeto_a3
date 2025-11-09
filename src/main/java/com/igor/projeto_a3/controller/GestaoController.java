@@ -7,7 +7,12 @@ import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
 import main.java.com.igor.projeto_a3.repository.VeiculosRepository;
 import main.java.com.igor.projeto_a3.repository.VendasRepository;
 
+import java.text.NumberFormat;
 import java.util.Scanner;
+
+/**
+ * @author Igor
+ */
 
 public class GestaoController {
 
@@ -16,41 +21,10 @@ public class GestaoController {
     public VendasRepository vendasRepository = new VendasRepository();
 
     Scanner sc = new Scanner(System.in);
+    NumberFormat nf = NumberFormat.getCurrencyInstance();
 
     public GestaoController(){
-        //inicializando os objetos automaticamente
-        CarroEntity c1 = new CarroEntity();
-        c1.setMarca("Mercedes");
-        c1.setModelo("AMG One");
-        c1.setCor("Cinza");
-        c1.setPlaca("OGC-874F");
-        c1.setPreco(14500.0);
-        c1.setKm(10.0);
-        c1.setCavalos(1200.0F);
-        c1.setPassageiros(2);
-        veiculosRepository.adicionarVeiculo(c1);
 
-        MotoEntity m1 = new MotoEntity();
-        m1.setMarca("Honda");
-        m1.setModelo("CG Fan 160");
-        m1.setCor("Vermelha");
-        m1.setPlaca("ETF-854F");
-        m1.setPreco(25000.0);
-        m1.setKm(0.0);
-        m1.setCarenagem("De rua");
-        m1.setCilindragem(162.7f);
-        veiculosRepository.adicionarVeiculo(m1);
-
-        CaminhaoEntity ce1 = new CaminhaoEntity();
-        ce1.setMarca("Scania");
-        ce1.setModelo("P400");
-        ce1.setCor("Branca");
-        ce1.setPlaca("FGD-4457");
-        ce1.setPreco(350000.0);
-        ce1.setKm(15.0);
-        ce1.setCabine("Grande");
-        ce1.setToneladas(10000.0f);
-        veiculosRepository.adicionarVeiculo(ce1);
     }
 
     //método para cadastrar
@@ -156,7 +130,14 @@ public class GestaoController {
                 da lista da posição i, retorna o veículo buscado
                 */
                 if(atributoDigitado.equalsIgnoreCase(veiculosRepository.veiculos.get(i).getPlaca())){
-                    System.out.println(veiculosRepository.veiculos.get(i));
+                    VeiculoEntity v = veiculosRepository.veiculos.get(i);
+
+                    System.out.printf("%-15s %-15s %-12s %-15s %-10s %-7s%n",
+                            "MODELO", "MARCA", "PLACA", "PREÇO", "COR", "KM");
+                    System.out.println("-----------------------------------------------------------------------------");
+                    System.out.printf("%-15s %-15s %-12s %-15s %-10s %-7s%n",
+                            v.getModelo(), v.getMarca(), v.getPlaca(),
+                            nf.format(v.getPreco()), v.getCor(), v.getKm());
                     return veiculosRepository.veiculos.get(i);
                 }
             }
@@ -171,14 +152,15 @@ public class GestaoController {
         if(!veiculosRepository.veiculos.isEmpty()){
             System.out.println("VEÍCULOS DISPONÍVEIS");
             //formatando para ficar em formato tabular com o printf()
-            System.out.printf("%-20s %-15s %-15s%n",
-                    "MODELO", "MARCA", "PLACA");
-            System.out.println("---------------------------------------------");
+            System.out.printf("%-20s %-15s %-15s %-10s%n",
+                    "MODELO", "MARCA", "PLACA", "PREÇO");
+            System.out.println("-------------------------------------------------------------------");
             //foreach na lista de veiculos
             for(VeiculoEntity v : veiculosRepository.veiculos) {
                 //formatando os atributos com o printf
-                System.out.printf("%-20s %-15s %-15s%n", v.getModelo(), v.getMarca(), v.getPlaca());
-                System.out.println("---------------------------------------------");
+                System.out.printf("%-20s %-15s %-15s %-10s%n", v.getModelo(), v.getMarca(), v.getPlaca(),
+                        nf.format(v.getPreco()));
+                System.out.println("-------------------------------------------------------------------");
             }
         }
     }
@@ -296,5 +278,4 @@ public class GestaoController {
             }
         }
     }
-
 }

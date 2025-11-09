@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a19f2223-0d10-475e-9e6a-f4c2c3fa14f1" name="Changes" comment="bug RegistrarVendasController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/application/Programa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/application/Programa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/GestaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/GestaoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" afterDir="false" />
@@ -89,7 +86,11 @@
       <workItem from="1762360761805" duration="6539000" />
       <workItem from="1762440350915" duration="15280000" />
       <workItem from="1762551104529" duration="4110000" />
-      <workItem from="1762568556760" duration="2697000" />
+      <workItem from="1762568556760" duration="4239000" />
+      <workItem from="1762572848424" duration="93000" />
+      <workItem from="1762644370035" duration="820000" />
+      <workItem from="1762652513612" duration="592000" />
+      <workItem from="1762722479354" duration="2371000" />
     </task>
     <task id="LOCAL-00001" summary="bug RegistrarVendasController">
       <option name="closed" value="true" />

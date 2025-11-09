@@ -5,6 +5,10 @@ import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Igor
+ */
+
 //repositório para lista
 public class VendasRepository {
     //lista de veículos vendidos

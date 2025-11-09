@@ -4,6 +4,10 @@ import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
 
 import java.text.NumberFormat;
 
+/**
+ * @author Igor
+ */
+
 public class RegistrarVendasController {
     //trazendo repositórios criados na classe GestaoController
     private GestaoController gestaoController;

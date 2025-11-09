@@ -4,6 +4,9 @@ import main.java.com.igor.projeto_a3.controller.FaturamentoController;
 import main.java.com.igor.projeto_a3.controller.GestaoController;
 import main.java.com.igor.projeto_a3.controller.RegistrarComprasController;
 import main.java.com.igor.projeto_a3.controller.RegistrarVendasController;
+import main.java.com.igor.projeto_a3.entity.CaminhaoEntity;
+import main.java.com.igor.projeto_a3.entity.CarroEntity;
+import main.java.com.igor.projeto_a3.entity.MotoEntity;
 
 import java.util.Scanner;
 
@@ -12,23 +15,58 @@ public class Programa {
     private Boolean executed = true;
     //objeto GestaoController (com os métodos crud)
     GestaoController gestao = new GestaoController();
+
     Scanner sc = new Scanner(System.in);
 
     public Programa(){
+        //inicializando os objetos automaticamente
+        CarroEntity c1 = new CarroEntity();
+        c1.setMarca("Mercedes");
+        c1.setModelo("AMG One");
+        c1.setCor("Cinza");
+        c1.setPlaca("OGC-874F");
+        c1.setPreco(14500.0);
+        c1.setKm(10.0);
+        c1.setCavalos(1200.0F);
+        c1.setPassageiros(2);
+        gestao.veiculosRepository.adicionarVeiculo(c1);
+
+        MotoEntity m1 = new MotoEntity();
+        m1.setMarca("Honda");
+        m1.setModelo("CG Fan 160");
+        m1.setCor("Vermelha");
+        m1.setPlaca("ETF-854F");
+        m1.setPreco(25000.0);
+        m1.setKm(0.0);
+        m1.setCarenagem("De rua");
+        m1.setCilindragem(162.7f);
+        gestao.veiculosRepository.adicionarVeiculo(m1);
+
+        CaminhaoEntity ce1 = new CaminhaoEntity();
+        ce1.setMarca("Scania");
+        ce1.setModelo("P400");
+        ce1.setCor("Branca");
+        ce1.setPlaca("FGD-4457");
+        ce1.setPreco(350000.0);
+        ce1.setKm(15.0);
+        ce1.setCabine("Grande");
+        ce1.setToneladas(10000.0f);
+        gestao.veiculosRepository.adicionarVeiculo(ce1);
+
         run();
     }
 
     public void run(){
         System.out.println("SISTEMA\n");
-        //enquanto for true
+        //enquanto for true, executa
         while(executed){
             System.out.println("\n");
             String menu = """ 
             ========== MENU ===========
-            1 - Faturamento
+            1 - Faturamento (sem implementação)
             2 - Veículos
             3 - Vender
-            4 - Comprar
+            4 - Comprar (sem implementação)
             5 - Sair
             ===========================
             Escolha uma opção:
@@ -66,9 +104,9 @@ public class Programa {
     private void menuVender() {
         System.out.println("\n");
         System.out.println("""
-                ========== VENDER VEICULOS ==========
+                ========== VENDER VEÍCULOS ==========
                 1 - Vender
-                2 - Listar veiculos vendidos
+                2 - Listar veículos vendidos
                 """);
         //objeto RegistrarVendarController
         RegistrarVendasController rvc = new RegistrarVendasController(gestao);
@@ -91,7 +129,7 @@ public class Programa {
         System.out.println("""
                 ========== COMPRAR VEICULOS ==========
                 1 - Comprar
-                2 - Listar veiculos comprados
+                2 - Listar veículos comprados
                 """);
         RegistrarComprasController rcc = new RegistrarComprasController();
     }
@@ -99,11 +137,11 @@ public class Programa {
     private void menuVeiculos(){
         System.out.println("""
             ========== VEICULOS ===========
-            1 - Cadastro
-            2 - Listar
-            3 - Deletar
-            4 - Alterar
-            5 - Buscar
+            1 - Cadastrar veiculo
+            2 - Listar veículos disponíveis
+            3 - Deletar veículo
+            4 - Alterar veículo
+            5 - Buscar veículo
             6 - Sair
             ===========================
             Escolha uma opção:
