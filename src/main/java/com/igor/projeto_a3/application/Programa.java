@@ -1,6 +1,6 @@
 package main.java.com.igor.projeto_a3.application;
 
-import main.java.com.igor.projeto_a3.controller.FaturamentoController;
+import main.java.com.igor.projeto_a3.controller.FinanceiroController;
 import main.java.com.igor.projeto_a3.controller.GestaoController;
 import main.java.com.igor.projeto_a3.controller.RegistrarComprasController;
 import main.java.com.igor.projeto_a3.controller.RegistrarVendasController;
@@ -25,7 +25,7 @@ public class Programa {
         c1.setModelo("AMG One");
         c1.setCor("Cinza");
         c1.setPlaca("OGC-874F");
-        c1.setPreco(14500.0);
+        c1.setPreco(15000.0);
         c1.setKm(10.0);
         c1.setCavalos(1200.0F);
         c1.setPassageiros(2);
@@ -47,7 +47,7 @@ public class Programa {
         ce1.setModelo("P400");
         ce1.setCor("Branca");
         ce1.setPlaca("FGD-4457");
-        ce1.setPreco(350000.0);
+        ce1.setPreco(300000.0);
         ce1.setKm(15.0);
         ce1.setCabine("Grande");
         ce1.setToneladas(10000.0f);
@@ -63,10 +63,10 @@ public class Programa {
             System.out.println("\n");
             String menu = """ 
             ========== MENU ===========
-            1 - Faturamento (sem implementação)
+            1 - Faturamento (implementando)
             2 - Veículos
             3 - Vender
-            4 - Comprar (sem implementação)
+            4 - Comprar/Cadastrar
             5 - Sair
             ===========================
             Escolha uma opção:
@@ -78,7 +78,7 @@ public class Programa {
             //opções de menu
             switch (opcao){
                 case 1:
-                    menuFaturamento();
+                    menuFinanceiro();
                     break;
                 case 2:
                     menuVeiculos();
@@ -97,8 +97,14 @@ public class Programa {
         }
     }
 
-    public void menuFaturamento(){
-        FaturamentoController fc = new  FaturamentoController();
+    public void menuFinanceiro(){
+        System.out.println("FINANCEIRO:");
+        FinanceiroController fc = new FinanceiroController(gestao);
+
+        System.out.println("Faturamento: " + gestao.nf.format(fc.calcularFaturamento()));
+        System.out.println("Lucro: " + gestao.nf.format(fc.calcularLucro()));
+        System.out.println("Capital disponível: ");
+
     }
 
     private void menuVender() {
@@ -131,18 +137,29 @@ public class Programa {
                 1 - Comprar
                 2 - Listar veículos comprados
                 """);
-        RegistrarComprasController rcc = new RegistrarComprasController();
+        RegistrarComprasController rcc = new RegistrarComprasController(gestao);
+        System.out.println("Escolha uma opção:");
+        int opcao = sc.nextInt();
+
+        switch (opcao) {
+            case 1:
+                System.out.println("\n");
+                rcc.comprarVeiculo();
+                break;
+            case 2:
+                System.out.println("\n");
+                rcc.listarVeiculosComprados();
+                break;
+        }
     }
 
     private void menuVeiculos(){
         System.out.println("""
             ========== VEICULOS ===========
-            1 - Cadastrar veiculo
+            1 - Alterar veículo 
             2 - Listar veículos disponíveis
-            3 - Deletar veículo
-            4 - Alterar veículo
-            5 - Buscar veículo
-            6 - Sair
+            3 - Buscar veículo
+            4 - Sair
             ===========================
             Escolha uma opção:
                 """);
@@ -150,21 +167,15 @@ public class Programa {
         int opcao = sc.nextInt();
         switch (opcao){
             case 1:
-                gestao.cadastrar();
+                gestao.alterar();
                 break;
             case 2:
                 gestao.listar();
                 break;
             case 3:
-                gestao.deletar();
-                break;
-            case 4:
-                gestao.alterar();
-                break;
-            case 5:
                 gestao.buscar();
                 break;
-            case 6:
+            case 4:
                 executed = false;
                 break;
         }

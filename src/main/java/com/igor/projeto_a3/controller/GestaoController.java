@@ -4,6 +4,7 @@ import main.java.com.igor.projeto_a3.entity.CaminhaoEntity;
 import main.java.com.igor.projeto_a3.entity.CarroEntity;
 import main.java.com.igor.projeto_a3.entity.MotoEntity;
 import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
+import main.java.com.igor.projeto_a3.repository.ComprasRepository;
 import main.java.com.igor.projeto_a3.repository.VeiculosRepository;
 import main.java.com.igor.projeto_a3.repository.VendasRepository;
 
@@ -19,19 +20,22 @@ public class GestaoController {
     //lista de veiculos
     public VeiculosRepository veiculosRepository = new VeiculosRepository();
     public VendasRepository vendasRepository = new VendasRepository();
+    public ComprasRepository  comprasRepository = new ComprasRepository();
 
     Scanner sc = new Scanner(System.in);
-    NumberFormat nf = NumberFormat.getCurrencyInstance();
+    public NumberFormat nf = NumberFormat.getCurrencyInstance();
 
     public GestaoController(){
 
     }
 
     //método para cadastrar
-    public void cadastrar(){
-        System.out.println("1 - Cadastrar Carro | 2 - Cadastrar Moto | 3 - Cadastrar Caminhão");
+    public VeiculoEntity cadastrar(){
+        System.out.println("1 - Comprar Carro | 2 - Comprar Moto | 3 - Comprar Caminhão");
         int opcao = sc.nextInt();
         sc.nextLine();
+
+        VeiculoEntity veiculoCadastrado = null;
 
         //opções de objetos (carro, moto, caminhão)
         switch (opcao){
@@ -60,7 +64,9 @@ public class GestaoController {
                 carro.setPassageiros(sc.nextInt());
                 //adicionando a lista de veiculos
                 veiculosRepository.adicionarVeiculo(carro);
+                veiculoCadastrado = carro;
                 break;
+
             case 2:
                 //criando um objeto carro e atribuindo os dados
                 MotoEntity moto = new MotoEntity();
@@ -86,6 +92,7 @@ public class GestaoController {
                 moto.setCarenagem(sc.nextLine());
                 //adicionando a lista de veiculos
                 veiculosRepository.adicionarVeiculo(moto);
+                veiculoCadastrado = moto;
                 break;
             case 3:
                 //criando um objeto carro e atribuindo os dados
@@ -112,8 +119,11 @@ public class GestaoController {
                 caminhao.setCabine(sc.nextLine());
                 //adicionando a lista de veiculos
                 veiculosRepository.adicionarVeiculo(caminhao);
+                veiculoCadastrado = caminhao;
                 break;
         }
+
+        return veiculoCadastrado;
     }
 
     //método para buscar

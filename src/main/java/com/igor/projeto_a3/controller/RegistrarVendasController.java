@@ -21,7 +21,6 @@ public class RegistrarVendasController {
 
     //método vender veiculo
     public void venderVeiculo(){
-        //verificando se a lista de veiculos não está vazia
         //criando uma variável do "tipo" VeiculoEntity atribuído ao método buscar() retornando um VeiculoEntity
         VeiculoEntity veiculoBuscado = gestaoController.buscar();
 
