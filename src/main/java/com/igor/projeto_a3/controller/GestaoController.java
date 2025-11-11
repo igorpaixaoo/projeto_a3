@@ -22,6 +22,8 @@ public class GestaoController {
     public VendasRepository vendasRepository = new VendasRepository();
     public ComprasRepository  comprasRepository = new ComprasRepository();
 
+    VeiculoEntity veiculoCadastrado = null;
+
     Scanner sc = new Scanner(System.in);
     public NumberFormat nf = NumberFormat.getCurrencyInstance();
 
@@ -34,8 +36,6 @@ public class GestaoController {
         System.out.println("1 - Comprar Carro | 2 - Comprar Moto | 3 - Comprar Caminhão");
         int opcao = sc.nextInt();
         sc.nextLine();
-
-        VeiculoEntity veiculoCadastrado = null;
 
         //opções de objetos (carro, moto, caminhão)
         switch (opcao){
@@ -54,14 +54,15 @@ public class GestaoController {
                 System.out.println("Km: ");
                 carro.setKm(sc.nextDouble());
                 sc.nextLine();
-                System.out.println("Preco: ");
-                carro.setPreco(sc.nextDouble());
-                sc.nextLine();
                 System.out.println("Cavalos: ");
                 carro.setCavalos(sc.nextFloat());
                 sc.nextLine();
                 System.out.println("Passageiros: ");
                 carro.setPassageiros(sc.nextInt());
+                sc.nextLine();
+                System.out.println("Valor da Compra: ");
+                carro.setPrecoCompra(sc.nextDouble());
+                sc.nextLine();
                 //adicionando a lista de veiculos
                 veiculosRepository.adicionarVeiculo(carro);
                 veiculoCadastrado = carro;
@@ -82,14 +83,14 @@ public class GestaoController {
                 System.out.println("Km: ");
                 moto.setKm(sc.nextDouble());
                 sc.nextLine();
-                System.out.println("Preco: ");
-                moto.setPreco(sc.nextDouble());
-                sc.nextLine();
                 System.out.println("Cilindragem: ");
                 moto.setCilindragem(sc.nextFloat());
                 sc.nextLine();
                 System.out.println("Carenagem: ");
                 moto.setCarenagem(sc.nextLine());
+                System.out.println("Valor da Compra: ");
+                moto.setPrecoCompra(sc.nextDouble());
+                sc.nextLine();
                 //adicionando a lista de veiculos
                 veiculosRepository.adicionarVeiculo(moto);
                 veiculoCadastrado = moto;
@@ -109,14 +110,12 @@ public class GestaoController {
                 System.out.println("Km: ");
                 caminhao.setKm(sc.nextDouble());
                 sc.nextLine();
-                System.out.println("Preco: ");
-                caminhao.setPreco(sc.nextDouble());
-                sc.nextLine();
                 System.out.println("Toneladas: ");
                 caminhao.setToneladas(sc.nextFloat());
                 sc.nextLine();
-                System.out.println("Cabine: ");
-                caminhao.setCabine(sc.nextLine());
+                System.out.println("Valor da Compra: ");
+                caminhao.setPrecoCompra(sc.nextDouble());
+                sc.nextLine();
                 //adicionando a lista de veiculos
                 veiculosRepository.adicionarVeiculo(caminhao);
                 veiculoCadastrado = caminhao;
@@ -143,11 +142,11 @@ public class GestaoController {
                     VeiculoEntity v = veiculosRepository.veiculos.get(i);
 
                     System.out.printf("%-15s %-15s %-12s %-15s %-10s %-7s%n",
-                            "MODELO", "MARCA", "PLACA", "PREÇO", "COR", "KM");
+                            "MODELO", "MARCA", "PLACA", "PREÇO COMPRA", "COR", "KM");
                     System.out.println("-----------------------------------------------------------------------------");
                     System.out.printf("%-15s %-15s %-12s %-15s %-10s %-7s%n",
                             v.getModelo(), v.getMarca(), v.getPlaca(),
-                            nf.format(v.getPreco()), v.getCor(), v.getKm());
+                            nf.format(v.getPrecoCompra()), v.getCor(), v.getKm());
                     return veiculosRepository.veiculos.get(i);
                 }
             }
@@ -163,14 +162,20 @@ public class GestaoController {
             System.out.println("VEÍCULOS DISPONÍVEIS");
             //formatando para ficar em formato tabular com o printf()
             System.out.printf("%-20s %-15s %-15s %-10s%n",
-                    "MODELO", "MARCA", "PLACA", "PREÇO");
+                    "MODELO", "MARCA", "PLACA", "PREÇO COMPRA");
             System.out.println("-------------------------------------------------------------------");
+
+            //ADICIONAR PREÇO DA COMPRA (que está na lista ComprasRepository)
+
             //foreach na lista de veiculos
             for(VeiculoEntity v : veiculosRepository.veiculos) {
-                //formatando os atributos com o printf
+
                 System.out.printf("%-20s %-15s %-15s %-10s%n", v.getModelo(), v.getMarca(), v.getPlaca(),
-                        nf.format(v.getPreco()));
+                        nf.format(v.getPrecoCompra()));
                 System.out.println("-------------------------------------------------------------------");
+
+                //formatando os atributos com o printf
+
             }
         }
     }

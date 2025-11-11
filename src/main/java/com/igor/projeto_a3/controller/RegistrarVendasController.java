@@ -36,6 +36,7 @@ public class RegistrarVendasController {
         gestaoController.vendasRepository.adicionarVeiculoVendido(veiculoBuscado);
         //removendo o veículo buscado da lista de veículos gerais
         gestaoController.veiculosRepository.veiculos.remove(veiculoBuscado);
+
         System.out.println("Veículo vendido com sucesso!");
     }
     //método listar veiculos vendidos

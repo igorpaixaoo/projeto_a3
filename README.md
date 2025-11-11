@@ -9,7 +9,7 @@ Um projeto A3 de Programação de Soluções Computacionais (Unifacs)
 - Igor Paixão
 - Luan Emanuel
 - Juan Hamilton
-- Rebeca Santos
+- Rebeca Soares
 
 Este projeto tem como objetivo o desenvolvimento de um sistema em Java com funcionalidades de cadastro e gerenciamento de registros, permitindo ao usuário cadastrar, listar, buscar, remover e modificar objetos de uma classe definida pela equipe (ex: funcionários, produtos, veículos, etc.).
 

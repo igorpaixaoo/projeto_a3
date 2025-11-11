@@ -19,8 +19,6 @@ public class RegistrarComprasController {
         System.out.println("COMPRAR VEICULO");
         //criando uma variável do "tipo" VeiculoEntity atribuído ao método cadastrar() retornando um VeiculoEntity
         VeiculoEntity veiculoCadastrado = gestaoController.cadastrar();
-        System.out.println("Valor da compra: ");
-        veiculoCadastrado.setPrecoVenda(Double.parseDouble(sc.nextLine()));
         //incrementando o contador de veiculos comprados (a cada compra)
         gestaoController.comprasRepository.contVeiculosComprados++;
         //adicionando o veiculo cadastrado na lista de veículos comprados
@@ -43,7 +41,7 @@ public class RegistrarComprasController {
             //foreach na lista de veiculos
             for(VeiculoEntity v : gestaoController.comprasRepository.compras) {
                 //formatando os atributos com o printf
-                System.out.printf("%-20s %-15s %-10s %-15s%n", v.getModelo(), v.getMarca(), v.getPlaca(), nf.format(v.getPrecoVenda()));
+                System.out.printf("%-20s %-15s %-10s %-15s%n", v.getModelo(), v.getMarca(), v.getPlaca(), nf.format(v.getPrecoCompra()));
                 System.out.println("-----------------------------------------------------------------");
             }
             System.out.println(gestaoController.comprasRepository.getContVeiculosComprados() + " veículo(s) comprados(s)");

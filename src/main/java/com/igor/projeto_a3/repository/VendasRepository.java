@@ -15,6 +15,7 @@ public class VendasRepository {
     public List<VeiculoEntity> vendas = new ArrayList<>();
     //contador de veículos vendidos
     public Integer contVeiculosVendidos = 0;
+    private Double fechamentoTotal = 0.0;
 
     //método para adicionar veiculo vendido
     public void adicionarVeiculoVendido(VeiculoEntity veiculo){
@@ -23,5 +24,13 @@ public class VendasRepository {
 
     public Integer getContVeiculosVendidos(){
         return  contVeiculosVendidos;
+    }
+
+    public void setFechamentoTotal(Double fechamentoTotal){
+        this.fechamentoTotal = fechamentoTotal;
+    }
+
+    public Double getFechamentoTotal(){
+        return fechamentoTotal;
     }
 }

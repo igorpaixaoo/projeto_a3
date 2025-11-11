@@ -25,7 +25,7 @@ public class Programa {
         c1.setModelo("AMG One");
         c1.setCor("Cinza");
         c1.setPlaca("OGC-874F");
-        c1.setPreco(15000.0);
+        c1.setPrecoCompra(2000000.0);
         c1.setKm(10.0);
         c1.setCavalos(1200.0F);
         c1.setPassageiros(2);
@@ -36,7 +36,7 @@ public class Programa {
         m1.setModelo("CG Fan 160");
         m1.setCor("Vermelha");
         m1.setPlaca("ETF-854F");
-        m1.setPreco(25000.0);
+        m1.setPrecoCompra(25000.0);
         m1.setKm(0.0);
         m1.setCarenagem("De rua");
         m1.setCilindragem(162.7f);
@@ -47,7 +47,7 @@ public class Programa {
         ce1.setModelo("P400");
         ce1.setCor("Branca");
         ce1.setPlaca("FGD-4457");
-        ce1.setPreco(300000.0);
+        ce1.setPrecoCompra(300000.0);
         ce1.setKm(15.0);
         ce1.setCabine("Grande");
         ce1.setToneladas(10000.0f);
@@ -101,9 +101,10 @@ public class Programa {
         System.out.println("FINANCEIRO:");
         FinanceiroController fc = new FinanceiroController(gestao);
 
-        System.out.println("Faturamento: " + gestao.nf.format(fc.calcularFaturamento()));
-        System.out.println("Lucro: " + gestao.nf.format(fc.calcularLucro()));
-        System.out.println("Capital disponível: ");
+        System.out.println("Faturamento: " + gestao.nf.format(fc.faturamentoTotal()));
+        System.out.println("Lucro: " + gestao.nf.format(fc.lucroVendido()));
+        //System.out.println("Lucro por venda: " + gestao.nf.format(fc.calcularLucroVeiculo(gestao)));
+        System.out.println("Capital disponível: " + gestao.nf.format(fc.capital()));
 
     }
 

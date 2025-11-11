@@ -12,33 +12,34 @@ public class FinanceiroController {
         this.gestaoController = gestaoController;
     }
 
-    /// BUGGGGGGGGGGGGGGGGGGGGGGGGG
-    public double calcularLucro(){
-        double totalValorCusto = 0.0;
+    public Double faturamentoTotal(){
+        Double total = 0.0;
 
-        for(VeiculoEntity v : gestaoController.veiculosRepository.veiculos){
-            for(VeiculoEntity v2 : gestaoController.vendasRepository.vendas){
-                totalValorCusto += v.getPreco() + v2.getPreco();
-            }
-
-        }
-
-        //bug bug bug bug
-
-        System.out.println(totalValorCusto);
-
-        return bancoRepository.getFaturamento() - totalValorCusto;
-    }
-
-    public double calcularSaldo(){
-        return 0.0;
-    }
-
-    public double calcularFaturamento(){
         for(VeiculoEntity v : gestaoController.vendasRepository.vendas){
-            return bancoRepository.faturamento += v.getPrecoVenda();
+            total += v.getPrecoVenda();
         }
-        return 0.0;
+
+        return total;
+    }
+
+    public Double lucroVendido(){
+        double total = 0.0;
+
+        for(VeiculoEntity v : gestaoController.vendasRepository.vendas){
+            total += v.getPrecoVenda() - v.getPrecoCompra();
+        }
+
+        return total;
+    }
+
+    public Double capital(){
+        double total = 0.0;
+
+        for(VeiculoEntity v : gestaoController.vendasRepository.vendas){
+            total += v.getPrecoVenda() - lucroVendido();
+        }
+
+        return total;
     }
 
 }
