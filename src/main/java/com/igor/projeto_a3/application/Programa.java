@@ -16,6 +16,8 @@ public class Programa {
     //objeto GestaoController (com os métodos crud)
     GestaoController gestao = new GestaoController();
 
+    FinanceiroController fc = new FinanceiroController(gestao);
+
     Scanner sc = new Scanner(System.in);
 
     public Programa(){
@@ -99,7 +101,7 @@ public class Programa {
 
     public void menuFinanceiro(){
         System.out.println("FINANCEIRO:");
-        FinanceiroController fc = new FinanceiroController(gestao);
+
 
         System.out.println("Faturamento: " + gestao.nf.format(fc.faturamentoTotal()));
         System.out.println("Lucro: " + gestao.nf.format(fc.lucroVendido()));
@@ -145,7 +147,7 @@ public class Programa {
         switch (opcao) {
             case 1:
                 System.out.println("\n");
-                rcc.comprarVeiculo();
+                rcc.comprarVeiculo(fc.capital());
                 break;
             case 2:
                 System.out.println("\n");

@@ -1,6 +1,7 @@
 package main.java.com.igor.projeto_a3.controller;
 
 import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
+import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
 import java.text.NumberFormat;
 import java.util.Scanner;
@@ -8,6 +9,7 @@ import java.util.Scanner;
 public class RegistrarComprasController {
 
     private GestaoController gestaoController;
+    private ColorTextEnum colorTextEnum;
 
     Scanner sc = new Scanner(System.in);
 
@@ -15,8 +17,8 @@ public class RegistrarComprasController {
         this.gestaoController = gestaoController;
     }
 
-    public void comprarVeiculo(){
-        System.out.println("COMPRAR VEICULO");
+    public void comprarVeiculo(Double capital){
+        System.out.println("COMPRAR VEICULO            Capital disponível: " + ColorTextEnum.COR_VERDE.cor() + gestaoController.nf.format(capital) + ColorTextEnum.COR_RESET.cor());
         //criando uma variável do "tipo" VeiculoEntity atribuído ao método cadastrar() retornando um VeiculoEntity
         VeiculoEntity veiculoCadastrado = gestaoController.cadastrar();
         //incrementando o contador de veiculos comprados (a cada compra)
