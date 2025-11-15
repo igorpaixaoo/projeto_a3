@@ -129,7 +129,7 @@ public class GestaoController {
     public VeiculoEntity buscar(){
         //verificando se a lista de veiculos não está vazia
         if(!veiculosRepository.veiculos.isEmpty()){
-            System.out.println("Buscar veiculo (placa): ");
+            System.out.println("BUSCAR VEÍCULO (placa):");
             //atributo (placa) digitado
             String atributoDigitado = sc.next();
 
@@ -225,8 +225,8 @@ public class GestaoController {
                     System.out.println("Km: ");
                     veiculoEncontrado.setKm(sc.nextDouble());
                     sc.nextLine();
-                    System.out.println("Preco: ");
-                    veiculoEncontrado.setPreco(sc.nextDouble());
+                    System.out.println("Preco da Compra: ");
+                    veiculoEncontrado.setPrecoCompra(sc.nextDouble());
                     sc.nextLine();
                     System.out.println("Cavalos: ");
                     //downcasting (conversão explícita da classe pai para classe filha)
@@ -252,8 +252,8 @@ public class GestaoController {
                     System.out.println("Km: ");
                     veiculoEncontrado.setKm(sc.nextDouble());
                     sc.nextLine();
-                    System.out.println("Preco: ");
-                    veiculoEncontrado.setPreco(sc.nextDouble());
+                    System.out.println("Preco Compra: ");
+                    veiculoEncontrado.setPrecoCompra(sc.nextDouble());
                     sc.nextLine();
                     System.out.println("Cilindragem: ");
                     //downcasting (conversão explícita da classe pai para classe filha)
@@ -278,8 +278,8 @@ public class GestaoController {
                     System.out.println("Km: ");
                     veiculoEncontrado.setKm(sc.nextDouble());
                     sc.nextLine();
-                    System.out.println("Preco: ");
-                    veiculoEncontrado.setPreco(sc.nextDouble());
+                    System.out.println("Preco da Compra: ");
+                    veiculoEncontrado.setPrecoCompra(sc.nextDouble());
                     sc.nextLine();
                     System.out.println("Toneladas: ");
                     //downcasting (conversão explícita da classe pai para classe filha)

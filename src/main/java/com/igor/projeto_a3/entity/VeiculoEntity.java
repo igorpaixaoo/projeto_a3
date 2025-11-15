@@ -8,18 +8,17 @@ public abstract class VeiculoEntity {
 	protected String marca;
 	protected String placa;
 	protected Double km;
-	protected Double preco;
     private Double precoVenda, precoCompra;
     protected Boolean vendido;
 
     //construtor
-	public VeiculoEntity(String modelo, String cor, String marca, String placa, Double km, Double preco) {
+	public VeiculoEntity(String modelo, String cor, String marca, String placa, Double km, Double precoCompra) {
 		this.modelo = modelo;
 		this.cor = cor;
 		this.marca = marca;
 		this.placa = placa;
 		this.km = km;
-		this.preco = preco;
+        this.precoCompra = precoCompra;
 	}
 	//construtor sobrecarregado
 	public VeiculoEntity() {
@@ -67,13 +66,6 @@ public abstract class VeiculoEntity {
 		this.km = km;
 	}
 
-	public Double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(Double preco) {
-		this.preco = preco;
-	}
 
     public Boolean getVendido() {
         return vendido;
@@ -103,7 +95,7 @@ public abstract class VeiculoEntity {
     @Override
 	public String toString() {
 		return "modelo: " + modelo + ", cor: " + cor + ", marca: " + marca + ", placa: " + placa + ", km: "
-				+ km + ", preco: " + preco;
+				+ km;
 	}
 	
 	

@@ -37,6 +37,6 @@ public class CaminhaoEntity extends VeiculoEntity{
 	@Override
 	public String toString() {
 		return "modelo: " + modelo + ", cor: " + cor + ", marca: " + marca + ", placa: " + placa + ", km: "
-				+ km + ", preco: " + preco;
+				+ km;
 	}
 }

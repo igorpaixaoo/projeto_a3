@@ -5,12 +5,17 @@ public enum ColorTextEnum {
     COR_VERDE(){
         @Override
         public String cor() {
-            return "\033[0;32m";
+            return "\033[0;92m";
         }
     }, COR_VERMELHO(){
         @Override
         public String cor() {
-            return "\033[0;31m";
+            return "\033[0;91m";
+        }
+    }, COR_BRANCO(){
+        @Override
+        public String cor() {
+            return "\033[0;97m";
         }
     }, COR_RESET(){
         @Override

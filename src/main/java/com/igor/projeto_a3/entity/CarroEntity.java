@@ -36,7 +36,7 @@ public class CarroEntity extends VeiculoEntity{
 	@Override
 	public String toString() {
 		return "Modelo: " + modelo + ", Cor: " + cor + ", Marca: " + marca + ", Placa: " + placa + ", KM: "
-				+ km + ", Preco: " + preco +  ", Cavalos: " + cavalos +  ", Passageiros: " + passageiros;
+				+ km +  ", Cavalos: " + cavalos +  ", Passageiros: " + passageiros;
 	}
 	
 	

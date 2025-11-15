@@ -7,70 +7,51 @@ import main.java.com.igor.projeto_a3.controller.RegistrarVendasController;
 import main.java.com.igor.projeto_a3.entity.CaminhaoEntity;
 import main.java.com.igor.projeto_a3.entity.CarroEntity;
 import main.java.com.igor.projeto_a3.entity.MotoEntity;
+import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
+import java.awt.*;
 import java.util.Scanner;
 
 public class Programa {
     //flag para sinalizar se o programa vai ser encerrado ou não
     private Boolean executed = true;
+
     //objeto GestaoController (com os métodos crud)
     GestaoController gestao = new GestaoController();
-
+    //objeto FinanceiroController (com as regras de negócio)
     FinanceiroController fc = new FinanceiroController(gestao);
 
     Scanner sc = new Scanner(System.in);
 
     public Programa(){
         //inicializando os objetos automaticamente
-        CarroEntity c1 = new CarroEntity();
-        c1.setMarca("Mercedes");
-        c1.setModelo("AMG One");
-        c1.setCor("Cinza");
-        c1.setPlaca("OGC-874F");
-        c1.setPrecoCompra(2000000.0);
-        c1.setKm(10.0);
-        c1.setCavalos(1200.0F);
-        c1.setPassageiros(2);
+        CarroEntity c1 = new CarroEntity("AMG One", "Cinza", "Mercedes", "OGC-874F", 10.0, 2000000.0, 1200.0F, 2);
         gestao.veiculosRepository.adicionarVeiculo(c1);
 
-        MotoEntity m1 = new MotoEntity();
-        m1.setMarca("Honda");
-        m1.setModelo("CG Fan 160");
-        m1.setCor("Vermelha");
-        m1.setPlaca("ETF-854F");
-        m1.setPrecoCompra(25000.0);
-        m1.setKm(0.0);
-        m1.setCarenagem("De rua");
-        m1.setCilindragem(162.7f);
+        MotoEntity m1 = new MotoEntity("CG Fan 160", "Vermelha", "Honda", "ETF-854F", 25000.0, 25000.0, "Rua", 162.7f);
         gestao.veiculosRepository.adicionarVeiculo(m1);
 
-        CaminhaoEntity ce1 = new CaminhaoEntity();
-        ce1.setMarca("Scania");
-        ce1.setModelo("P400");
-        ce1.setCor("Branca");
-        ce1.setPlaca("FGD-4457");
-        ce1.setPrecoCompra(300000.0);
-        ce1.setKm(15.0);
-        ce1.setCabine("Grande");
-        ce1.setToneladas(10000.0f);
+        CaminhaoEntity ce1 = new CaminhaoEntity("P400", "Branca", "Scania", "FGD-4457", 300000.0, 300000.0, 10000.0f, "Grande");
         gestao.veiculosRepository.adicionarVeiculo(ce1);
+
+        System.out.println(ColorTextEnum.COR_BRANCO.cor() + "        GERENCIADOR DE COMPRA E VENDA DE VEÍCULOS"
+                + ColorTextEnum.COR_RESET.cor());
 
         run();
     }
 
     public void run(){
-        System.out.println("SISTEMA\n");
         //enquanto for true, executa
         while(executed){
             System.out.println("\n");
             String menu = """ 
             ========== MENU ===========
-            1 - Faturamento (implementando)
+            1 - Financeiro
             2 - Veículos
             3 - Vender
             4 - Comprar/Cadastrar
-            5 - Sair
-            ===========================
+            5 - Encerrar
+   
             Escolha uma opção:
             """;
 
@@ -92,7 +73,7 @@ public class Programa {
                     menuComprar();
                     break;
                 case 5:
-                    System.out.println("Programa encerrado");
+                    System.out.println("SISTEMA ENCERRADO");
                     executed = false;
                     break;
             }
@@ -100,22 +81,31 @@ public class Programa {
     }
 
     public void menuFinanceiro(){
-        System.out.println("FINANCEIRO:");
+        System.out.println("     FINANCEIRO");
 
+        //bug cor
+        String cor = ColorTextEnum.COR_VERDE.cor();
+        if(fc.bancoRepository.getCapital() <= 1000){
+            cor = ColorTextEnum.COR_VERMELHO.cor();
+        }
 
-        System.out.println("Faturamento: " + gestao.nf.format(fc.faturamentoTotal()));
-        System.out.println("Lucro: " + gestao.nf.format(fc.lucroVendido()));
-        //System.out.println("Lucro por venda: " + gestao.nf.format(fc.calcularLucroVeiculo(gestao)));
-        System.out.println("Capital disponível: " + gestao.nf.format(fc.capital()));
+        System.out.println("Faturamento: " + ColorTextEnum.COR_VERDE.cor() + gestao.nf.format(fc.faturamentoTotal())
+                + ColorTextEnum.COR_RESET.cor());
+        System.out.println("Lucro Total: " + ColorTextEnum.COR_VERDE.cor() + gestao.nf.format(fc.lucroVendido())
+                + ColorTextEnum.COR_RESET.cor());
+        //System.out.println("Lucro ultima venda: " + gestao.nf.format(fc.calcularLucroVeiculo(gestao)));
+        System.out.println("Capital disponível: " + cor + gestao.nf.format(fc.capital())
+                + ColorTextEnum.COR_RESET.cor());
 
     }
 
     private void menuVender() {
         System.out.println("\n");
         System.out.println("""
-                ========== VENDER VEÍCULOS ==========
+                      VENDER VEÍCULOS 
                 1 - Vender
                 2 - Listar veículos vendidos
+                3 - Voltar ao menu
                 """);
         //objeto RegistrarVendarController
         RegistrarVendasController rvc = new RegistrarVendasController(gestao);
@@ -130,15 +120,18 @@ public class Programa {
             System.out.println("\n");
             //chamando o método listarVeiculos()
             rvc.listarVeiculosVendidos();
+        }else if(opcao == 3){
+            run();
         }
     }
 
     private void menuComprar() {
         System.out.println("\n");
         System.out.println("""
-                ========== COMPRAR VEICULOS ==========
+                       COMPRAR VEICULOS 
                 1 - Comprar
                 2 - Listar veículos comprados
+                3 - Voltar ao menu
                 """);
         RegistrarComprasController rcc = new RegistrarComprasController(gestao);
         System.out.println("Escolha uma opção:");
@@ -147,23 +140,26 @@ public class Programa {
         switch (opcao) {
             case 1:
                 System.out.println("\n");
-                rcc.comprarVeiculo(fc.capital());
+                rcc.comprarVeiculo(fc.bancoRepository);
                 break;
             case 2:
                 System.out.println("\n");
                 rcc.listarVeiculosComprados();
+                break;
+            case 3:
+                run();
                 break;
         }
     }
 
     private void menuVeiculos(){
         System.out.println("""
-            ========== VEICULOS ===========
+            ======== VEICULOS =========
             1 - Alterar veículo 
             2 - Listar veículos disponíveis
             3 - Buscar veículo
-            4 - Sair
-            ===========================
+            4 - Voltar ao menu
+         
             Escolha uma opção:
                 """);
 
@@ -179,7 +175,7 @@ public class Programa {
                 gestao.buscar();
                 break;
             case 4:
-                executed = false;
+                run();
                 break;
         }
 

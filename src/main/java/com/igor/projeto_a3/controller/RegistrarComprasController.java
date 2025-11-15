@@ -1,6 +1,7 @@
 package main.java.com.igor.projeto_a3.controller;
 
 import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
+import main.java.com.igor.projeto_a3.repository.BancoRepository;
 import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
 import java.text.NumberFormat;
@@ -9,7 +10,6 @@ import java.util.Scanner;
 public class RegistrarComprasController {
 
     private GestaoController gestaoController;
-    private ColorTextEnum colorTextEnum;
 
     Scanner sc = new Scanner(System.in);
 
@@ -17,16 +17,28 @@ public class RegistrarComprasController {
         this.gestaoController = gestaoController;
     }
 
-    public void comprarVeiculo(Double capital){
-        System.out.println("COMPRAR VEICULO            Capital disponível: " + ColorTextEnum.COR_VERDE.cor() + gestaoController.nf.format(capital) + ColorTextEnum.COR_RESET.cor());
+    public void comprarVeiculo(BancoRepository bancoRepository) {
+        String cor = "";;
+        if(bancoRepository.getCapital() <= 1000){
+            cor = ColorTextEnum.COR_VERMELHO.cor();
+        }else cor = ColorTextEnum.COR_VERDE.cor();
+
+        System.out.println("COMPRAR VEICULO            Capital disponível: " + cor
+                + gestaoController.nf.format(bancoRepository.getCapital())
+                + ColorTextEnum.COR_RESET.cor());
+
         //criando uma variável do "tipo" VeiculoEntity atribuído ao método cadastrar() retornando um VeiculoEntity
         VeiculoEntity veiculoCadastrado = gestaoController.cadastrar();
+
+        Double preco = veiculoCadastrado.getPrecoCompra();
+        bancoRepository.setCapital(bancoRepository.getCapital() - preco);
+
         //incrementando o contador de veiculos comprados (a cada compra)
         gestaoController.comprasRepository.contVeiculosComprados++;
         //adicionando o veiculo cadastrado na lista de veículos comprados
         gestaoController.comprasRepository.adicionarVeiculoComprado(veiculoCadastrado);
 
-        System.out.println("Veículo comprado com sucesso!");
+        System.out.println(ColorTextEnum.COR_VERDE.cor() + "Veículo comprado com sucesso!" + ColorTextEnum.COR_RESET.cor());
 
     }
 

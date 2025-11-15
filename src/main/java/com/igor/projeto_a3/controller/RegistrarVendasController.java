@@ -1,6 +1,7 @@
 package main.java.com.igor.projeto_a3.controller;
 
 import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
+import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
 import java.text.NumberFormat;
 
@@ -37,7 +38,8 @@ public class RegistrarVendasController {
         //removendo o veículo buscado da lista de veículos gerais
         gestaoController.veiculosRepository.veiculos.remove(veiculoBuscado);
 
-        System.out.println("Veículo vendido com sucesso!");
+        System.out.println("\n");
+        System.out.println(ColorTextEnum.COR_VERDE.cor() + "Veículo vendido com sucesso!" + ColorTextEnum.COR_RESET.cor());
     }
     //método listar veiculos vendidos
     public void listarVeiculosVendidos(){

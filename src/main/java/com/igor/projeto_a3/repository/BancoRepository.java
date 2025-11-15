@@ -2,16 +2,16 @@ package main.java.com.igor.projeto_a3.repository;
 
 public class BancoRepository {
 
-    private Double saldo = 0.0;
+    public Double capital = 0.0;
     private Double lucro = 0.0;
     public Double faturamento = 0.0;
 
-    public Double getSaldo() {
-        return saldo;
+    public Double getCapital() {
+        return capital;
     }
 
-    public void setSaldo(Double saldo) {
-        this.saldo = saldo;
+    public void setCapital(Double capital) {
+        this.capital = capital;
     }
 
     public Double getLucro() {
