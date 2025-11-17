@@ -4,7 +4,7 @@ public class BancoRepository {
 
     public Double capital = 0.0;
     private Double lucro = 0.0;
-    public Double faturamento = 0.0;
+    private Double faturamento = 0.0;
 
     public Double getCapital() {
         return capital;

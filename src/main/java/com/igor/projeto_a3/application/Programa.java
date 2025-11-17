@@ -49,7 +49,7 @@ public class Programa {
             1 - Financeiro
             2 - Veículos
             3 - Vender
-            4 - Comprar/Cadastrar
+            4 - Comprar
             5 - Encerrar
    
             Escolha uma opção:

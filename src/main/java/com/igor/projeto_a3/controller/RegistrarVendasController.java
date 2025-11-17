@@ -22,10 +22,12 @@ public class RegistrarVendasController {
 
     //método vender veiculo
     public void venderVeiculo(){
+        gestaoController.listar();
+
         //criando uma variável do "tipo" VeiculoEntity atribuído ao método buscar() retornando um VeiculoEntity
         VeiculoEntity veiculoBuscado = gestaoController.buscar();
 
-        System.out.println("Valor da venda: ");
+        System.out.println("\nValor da venda: ");
         //settando o preço da venda e incrementando o contador de veiculos
         veiculoBuscado.setPrecoVenda(gestaoController.sc.nextDouble());
 

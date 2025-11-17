@@ -30,8 +30,8 @@ public class RegistrarComprasController {
         //criando uma variável do "tipo" VeiculoEntity atribuído ao método cadastrar() retornando um VeiculoEntity
         VeiculoEntity veiculoCadastrado = gestaoController.cadastrar();
 
-        Double preco = veiculoCadastrado.getPrecoCompra();
-        bancoRepository.setCapital(bancoRepository.getCapital() - preco);
+        //subtraindo o valor da capital pelo valor da compra (tirando dinheiro do capital para comprar)
+        bancoRepository.setCapital(bancoRepository.getCapital() - veiculoCadastrado.getPrecoCompra());
 
         //incrementando o contador de veiculos comprados (a cada compra)
         gestaoController.comprasRepository.contVeiculosComprados++;
