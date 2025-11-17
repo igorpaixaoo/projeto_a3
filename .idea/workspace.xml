@@ -6,27 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a19f2223-0d10-475e-9e6a-f4c2c3fa14f1" name="Changes" comment="bug RegistrarVendasController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/application/Programa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/application/Programa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/FinanceiroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/FinanceiroController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/GestaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/GestaoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/RegistrarComprasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/RegistrarComprasController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/repository/BancoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/repository/BancoRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/util/ColorTextEnum$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/util/ColorTextEnum$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/util/ColorTextEnum$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/util/ColorTextEnum$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/util/ColorTextEnum$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/util/ColorTextEnum$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/util/ColorTextEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/util/ColorTextEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/FinanceiroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/FinanceiroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarComprasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarComprasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CaminhaoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CaminhaoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CarroEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CarroEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/MotoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/MotoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/VeiculoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/VeiculoEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/BancoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/repository/BancoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/util/ColorTextEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/util/ColorTextEnum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +119,9 @@
       <workItem from="1762906817057" duration="1230000" />
       <workItem from="1762976347304" duration="4254000" />
       <workItem from="1762991689331" duration="6583000" />
-      <workItem from="1763148745247" duration="5623000" />
+      <workItem from="1763148745247" duration="6398000" />
+      <workItem from="1763217624620" duration="25000" />
+      <workItem from="1763336543398" duration="798000" />
     </task>
     <task id="LOCAL-00001" summary="bug RegistrarVendasController">
       <option name="closed" value="true" />
