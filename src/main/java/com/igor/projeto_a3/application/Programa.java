@@ -9,7 +9,6 @@ import main.java.com.igor.projeto_a3.entity.CarroEntity;
 import main.java.com.igor.projeto_a3.entity.MotoEntity;
 import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
-import java.awt.*;
 import java.util.Scanner;
 
 public class Programa {

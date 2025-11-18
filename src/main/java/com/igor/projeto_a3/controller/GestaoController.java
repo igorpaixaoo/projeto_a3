@@ -7,7 +7,9 @@ import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
 import main.java.com.igor.projeto_a3.repository.ComprasRepository;
 import main.java.com.igor.projeto_a3.repository.VeiculosRepository;
 import main.java.com.igor.projeto_a3.repository.VendasRepository;
+import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
+import java.awt.*;
 import java.text.NumberFormat;
 import java.util.Scanner;
 
@@ -22,7 +24,7 @@ public class GestaoController {
     public VendasRepository vendasRepository = new VendasRepository();
     public ComprasRepository  comprasRepository = new ComprasRepository();
 
-    VeiculoEntity veiculoCadastrado = null;
+    VeiculoEntity veiculoCadastrado;
 
     Scanner sc = new Scanner(System.in);
     public NumberFormat nf = NumberFormat.getCurrencyInstance();
@@ -120,11 +122,16 @@ public class GestaoController {
                 veiculosRepository.adicionarVeiculo(caminhao);
                 veiculoCadastrado = caminhao;
                 break;
+            default:
+                System.out.println(ColorTextEnum.COR_VERMELHO.cor() + "Opção não encontrada!" + ColorTextEnum.COR_RESET.cor());
+                cadastrar();
+                break;
         }
 
         return veiculoCadastrado;
     }
 
+    //ADICIONAR VERIFICAÇÃO SE A PLACA NÃO FOR ENCONTRADA
     //método para buscar
     public VeiculoEntity buscar(){
         //verificando se a lista de veiculos não está vazia
@@ -148,9 +155,12 @@ public class GestaoController {
                             v.getModelo(), v.getMarca(), v.getPlaca(),
                             nf.format(v.getPrecoCompra()), v.getCor(), v.getKm());
                     return veiculosRepository.veiculos.get(i);
+                }else {
+                    System.out.println(ColorTextEnum.COR_VERMELHO.cor() + "Veículo não encontrado!" + ColorTextEnum.COR_RESET.cor());
+                    break;
                 }
             }
-        }else System.out.println("Veiculo não encontrado!");
+        }
 
         return null;
     }
