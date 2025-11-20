@@ -206,7 +206,8 @@ public class GestaoController {
                 veiculosRepository.veiculos.remove(deletarVeiculo);
                 System.out.println("veiculo removido com sucesso!");
             }else if (Character.toString(opcao).equalsIgnoreCase("N")) System.out.println("Veiculo não deletado!");
-        }
+            
+        } else System.out.println(ColorTextEnum.COR_VERMELHO.cor() + "OPÇÃO INVÁLIDA, tente novamente!" + ColorTextEnum.COR_RESET.cor());
 
         return null;
     }
