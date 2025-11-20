@@ -1,6 +1,6 @@
 package main.java.com.igor.projeto_a3.controller;
 
-import main.java.com.igor.projeto_a3.entity.CaminhaoEntity;
+import main.java.com.igor.projeto_a3.entity.CaminhaoEntity; 
 import main.java.com.igor.projeto_a3.entity.CarroEntity;
 import main.java.com.igor.projeto_a3.entity.MotoEntity;
 import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
@@ -197,6 +197,7 @@ public class GestaoController {
             System.out.println("DELETAR VEÍCULO");
             //o objeto a ser deletado vai ser retornado pelo método buscar()
             VeiculoEntity deletarVeiculo = buscar();
+        
 
             //verificando se deseja deletar
             System.out.println("Deseja realmente deletar o veículo? S / N");
@@ -206,7 +207,8 @@ public class GestaoController {
                 veiculosRepository.veiculos.remove(deletarVeiculo);
                 System.out.println("veiculo removido com sucesso!");
             }else if (Character.toString(opcao).equalsIgnoreCase("N")) System.out.println("Veiculo não deletado!");
-        }
+            
+        }else System.out.println(ColorTextEnum.COR_VERMELHO.cor() + "Lista vazia! Tente novamente!!" + ColorTextEnum.COR_RESET.cor());
 
         return null;
     }
