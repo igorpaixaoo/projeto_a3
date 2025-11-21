@@ -35,4 +35,6 @@ public class MotoEntity extends VeiculoEntity{
 		return "Modelo: " + modelo + ", Cor: " + cor + ", Marca: " + marca + ", Placa: " + placa + ", KM: "
 				+ km + ", Preco: " + ", Carenagem: " + carenagem + ", Cilindragem: " + cilindragem;
 	}
+
+
 }

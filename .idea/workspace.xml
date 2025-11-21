@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="a19f2223-0d10-475e-9e6a-f4c2c3fa14f1" name="Changes" comment="bug RegistrarVendasController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/application/Programa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/application/Programa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/GestaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/GestaoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/entity/VeiculoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/entity/VeiculoEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/GestaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CaminhaoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CaminhaoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CarroEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/CarroEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/MotoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/MotoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/VeiculoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/entity/VeiculoEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -126,7 +135,11 @@
       <workItem from="1763336543398" duration="798000" />
       <workItem from="1763381269282" duration="5860000" />
       <workItem from="1763428738926" duration="640000" />
-      <workItem from="1763468152949" duration="5621000" />
+      <workItem from="1763468152949" duration="9537000" />
+      <workItem from="1763491697259" duration="2000" />
+      <workItem from="1763514385343" duration="2495000" />
+      <workItem from="1763658016899" duration="2635000" />
+      <workItem from="1763751146402" duration="5422000" />
     </task>
     <task id="LOCAL-00001" summary="bug RegistrarVendasController">
       <option name="closed" value="true" />

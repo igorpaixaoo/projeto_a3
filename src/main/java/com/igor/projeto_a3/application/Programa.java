@@ -9,6 +9,7 @@ import main.java.com.igor.projeto_a3.entity.CarroEntity;
 import main.java.com.igor.projeto_a3.entity.MotoEntity;
 import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Programa {
@@ -35,9 +36,9 @@ public class Programa {
 
         System.out.println(ColorTextEnum.COR_BRANCO.cor() + "        GERENCIADOR DE COMPRA E VENDA DE VEÍCULOS"
                 + ColorTextEnum.COR_RESET.cor());
-
         run();
     }
+
 
     public void run(){
         //enquanto for true, executa
@@ -74,6 +75,9 @@ public class Programa {
                 case 5:
                     System.out.println("SISTEMA ENCERRADO");
                     executed = false;
+                    break;
+                default:
+                    System.out.println(ColorTextEnum.COR_VERMELHO.cor() + "Opção não encontrada!" + ColorTextEnum.COR_RESET.cor());
                     break;
             }
         }
@@ -121,7 +125,7 @@ public class Programa {
             rvc.listarVeiculosVendidos();
         }else if(opcao == 3){
             run();
-        }
+        }else menuVender();
     }
 
     private void menuComprar() {
@@ -147,6 +151,10 @@ public class Programa {
                 break;
             case 3:
                 run();
+                break;
+            default:
+                System.out.println(ColorTextEnum.COR_VERMELHO.cor() + "Opção não encontrada!" + ColorTextEnum.COR_RESET.cor());
+                menuComprar();
                 break;
         }
     }
@@ -175,6 +183,10 @@ public class Programa {
                 break;
             case 4:
                 run();
+                break;
+            default:
+                System.out.println(ColorTextEnum.COR_VERMELHO.cor() + "Opção não encontrada!" + ColorTextEnum.COR_RESET.cor());
+                menuVeiculos();
                 break;
         }
 

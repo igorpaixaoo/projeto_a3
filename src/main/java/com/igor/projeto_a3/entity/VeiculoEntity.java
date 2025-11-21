@@ -1,7 +1,7 @@
 package main.java.com.igor.projeto_a3.entity;
 
 //classe abstrata para herança
-public abstract class VeiculoEntity {
+public abstract class VeiculoEntity{
 	//atributos classe pai
 	protected String modelo;
 	protected String cor;
@@ -97,6 +97,4 @@ public abstract class VeiculoEntity {
 		return "modelo: " + modelo + ", cor: " + cor + ", marca: " + marca + ", placa: " + placa + ", km: "
 				+ km;
 	}
-	
-	
 }

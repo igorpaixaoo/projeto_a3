@@ -11,6 +11,8 @@ import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
 import java.awt.*;
 import java.text.NumberFormat;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 /**
@@ -154,13 +156,12 @@ public class GestaoController {
                     System.out.printf("%-15s %-15s %-12s %-15s %-10s %-7s%n",
                             v.getModelo(), v.getMarca(), v.getPlaca(),
                             nf.format(v.getPrecoCompra()), v.getCor(), v.getKm());
+
                     return veiculosRepository.veiculos.get(i);
-                }else {
-                    System.out.println(ColorTextEnum.COR_VERMELHO.cor() + "Veículo não encontrado!" + ColorTextEnum.COR_RESET.cor());
-                    break;
                 }
             }
-        }
+            System.out.println(ColorTextEnum.COR_VERMELHO.cor() + "Veículo não encontrado!" + ColorTextEnum.COR_RESET.cor());
+        }else System.out.println("Não tem veículos disponíveis");
 
         return null;
     }
@@ -179,15 +180,45 @@ public class GestaoController {
 
             //foreach na lista de veiculos
             for(VeiculoEntity v : veiculosRepository.veiculos) {
-
+                //formatando os atributos com o printf
                 System.out.printf("%-20s %-15s %-15s %-10s%n", v.getModelo(), v.getMarca(), v.getPlaca(),
                         nf.format(v.getPrecoCompra()));
                 System.out.println("-------------------------------------------------------------------");
-
-                //formatando os atributos com o printf
-
             }
+            System.out.println("Ordenar: 1 - Modelo, 2 - Marca, 3 - Placa, 4 - Preço, 5 - Voltar");
+
+            int opcao = sc.nextInt();
+            ordenar(opcao);
+
+        }else System.out.println("Não tem veículos disponíveis");
+    }
+
+    //método para ordenar a lista de VeiculoEntity por algum atributo
+    public int ordenar(int opcaoOrdem){
+        switch (opcaoOrdem){
+            case 1:
+                //ordenar pelo modelo
+                veiculosRepository.veiculos.sort(Comparator.comparing(VeiculoEntity::getModelo));
+                break;
+            case 2:
+                //ordenar pela marca
+                veiculosRepository.veiculos.sort(Comparator.comparing(VeiculoEntity::getMarca));
+                break;
+            case 3:
+                //ordenar pela placa
+                veiculosRepository.veiculos.sort(Comparator.comparing(VeiculoEntity::getPlaca));
+                break;
+            case 4:
+                //ordenar pelo valor
+                veiculosRepository.veiculos.sort(Comparator.comparing(VeiculoEntity::getPrecoCompra));
+                break;
+            case 5:
+                return 0;
         }
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n");
+        listar();
+
+        return 0;
     }
 
     //método para deletar
@@ -301,6 +332,6 @@ public class GestaoController {
                     sc.nextLine();
                 }
             }
-        }
+        }else System.out.println("Não tem veículos disponíveis!");
     }
 }

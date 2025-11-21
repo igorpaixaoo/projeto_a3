@@ -39,4 +39,5 @@ public class CaminhaoEntity extends VeiculoEntity{
 		return "modelo: " + modelo + ", cor: " + cor + ", marca: " + marca + ", placa: " + placa + ", km: "
 				+ km;
 	}
+
 }

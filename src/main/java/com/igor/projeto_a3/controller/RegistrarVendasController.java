@@ -27,21 +27,23 @@ public class RegistrarVendasController {
         //criando uma variável do "tipo" VeiculoEntity atribuído ao método buscar() retornando um VeiculoEntity
         VeiculoEntity veiculoBuscado = gestaoController.buscar();
 
-        System.out.println("\nValor da venda: ");
-        //settando o preço da venda e incrementando o contador de veiculos
-        veiculoBuscado.setPrecoVenda(gestaoController.sc.nextDouble());
+        if(veiculoBuscado != null){
+            System.out.println("\nValor da venda: ");
+            //settando o preço da venda e incrementando o contador de veiculos
+            veiculoBuscado.setPrecoVenda(gestaoController.sc.nextDouble());
 
-        //incrementando o contador de veiculos vendidos a cada venda
-        gestaoController.vendasRepository.contVeiculosVendidos++;
+            //incrementando o contador de veiculos vendidos a cada venda
+            gestaoController.vendasRepository.contVeiculosVendidos++;
 
-        //verificando se o veículo buscado não é nulo
-        //adicionando o veículo vendido na lista de vendas
-        gestaoController.vendasRepository.adicionarVeiculoVendido(veiculoBuscado);
-        //removendo o veículo buscado da lista de veículos gerais
-        gestaoController.veiculosRepository.veiculos.remove(veiculoBuscado);
+            //verificando se o veículo buscado não é nulo
+            //adicionando o veículo vendido na lista de vendas
+            gestaoController.vendasRepository.adicionarVeiculoVendido(veiculoBuscado);
+            //removendo o veículo buscado da lista de veículos gerais
+            gestaoController.veiculosRepository.veiculos.remove(veiculoBuscado);
 
-        System.out.println("\n");
-        System.out.println(ColorTextEnum.COR_VERDE.cor() + "Veículo vendido com sucesso!" + ColorTextEnum.COR_RESET.cor());
+            System.out.println("\n");
+            System.out.println(ColorTextEnum.COR_VERDE.cor() + "Veículo vendido com sucesso!" + ColorTextEnum.COR_RESET.cor());
+        }
     }
     //método listar veiculos vendidos
     public void listarVeiculosVendidos(){

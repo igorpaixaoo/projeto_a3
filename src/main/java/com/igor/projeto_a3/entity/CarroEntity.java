@@ -38,6 +38,5 @@ public class CarroEntity extends VeiculoEntity{
 		return "Modelo: " + modelo + ", Cor: " + cor + ", Marca: " + marca + ", Placa: " + placa + ", KM: "
 				+ km +  ", Cavalos: " + cavalos +  ", Passageiros: " + passageiros;
 	}
-	
-	
+
 }
