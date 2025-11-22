@@ -25,14 +25,24 @@ public class Programa {
 
     public Programa(){
         //inicializando os objetos automaticamente
-        CarroEntity c1 = new CarroEntity("AMG One", "Cinza", "Mercedes", "OGC-874F", 10.0, 2000000.0, 1200.0F, 2);
+        CarroEntity c1 = new CarroEntity("AMG One", "Cinza", "Mercedes", "HAM-4444", 10.0, 2000000.0, 1200.0F, 2);
         gestao.veiculosRepository.adicionarVeiculo(c1);
-
-        MotoEntity m1 = new MotoEntity("CG Fan 160", "Vermelha", "Honda", "ETF-854F", 25000.0, 25000.0, "Rua", 162.7f);
+        CarroEntity c2 = new CarroEntity("Mobi Like 1.0", "Prata", "Fiat", "RUS-6363", 0.0, 77000.0, 110.0F, 4);
+        gestao.veiculosRepository.adicionarVeiculo(c2);
+        CarroEntity c3 = new CarroEntity("Onix 1.0", "Branco", "Chevrolet", "HFS-54FG", 0.0, 95000.0, 115.0F, 4);
+        gestao.veiculosRepository.adicionarVeiculo(c3);
+        CarroEntity c4 = new CarroEntity("F8", "Vermelho", "Ferrari", "LEC-1616", 1200.0, 3500000.0, 720.0F, 2);
+        gestao.veiculosRepository.adicionarVeiculo(c4);
+        MotoEntity m1 = new MotoEntity("CG Fan 160", "Vermelha", "Honda", "ETF-854F", 10.0, 25000.0, "Rua", 160f);
         gestao.veiculosRepository.adicionarVeiculo(m1);
-
-        CaminhaoEntity ce1 = new CaminhaoEntity("P400", "Branca", "Scania", "FGD-4457", 300000.0, 300000.0, 10000.0f, "Grande");
+        MotoEntity m2 = new MotoEntity("Biz 125", "Vermelha", "Honda", "FJM-45D7", 200.0, 25000.0, "Rua", 160.7f);
+        gestao.veiculosRepository.adicionarVeiculo(m2);
+        MotoEntity m3 = new MotoEntity("Africa Twin 1100", "Branco", "Honda", "DVS-457H", 0.0, 95000.0, "OffRoad", 1100.24f);
+        gestao.veiculosRepository.adicionarVeiculo(m3);
+        CaminhaoEntity ce1 = new CaminhaoEntity("Constellation 14.210", "Branca", "Volkswagen", "DSW-48F5", 20.0, 450000.0, 10000.0f, "Grande");
         gestao.veiculosRepository.adicionarVeiculo(ce1);
+        CaminhaoEntity ce2 = new CaminhaoEntity("Tector 9-190", "Branca", "Iveco", "MAX-3333", 20.0, 450000.0, 10000.0f, "Grande");
+        gestao.veiculosRepository.adicionarVeiculo(ce2);
 
         System.out.println(ColorTextEnum.COR_BRANCO.cor() + "        GERENCIADOR DE COMPRA E VENDA DE VEÍCULOS"
                 + ColorTextEnum.COR_RESET.cor());

@@ -31,6 +31,9 @@ public class GestaoController {
     Scanner sc = new Scanner(System.in);
     public NumberFormat nf = NumberFormat.getCurrencyInstance();
 
+    //flag para determinar se a ordem será crescente ou decrescente do Preço
+    Boolean precoOrdemCrescente = true;
+
     public GestaoController(){
 
     }
@@ -209,8 +212,15 @@ public class GestaoController {
                 veiculosRepository.veiculos.sort(Comparator.comparing(VeiculoEntity::getPlaca));
                 break;
             case 4:
-                //ordenar pelo valor
-                veiculosRepository.veiculos.sort(Comparator.comparing(VeiculoEntity::getPrecoCompra));
+                if(!precoOrdemCrescente){
+                    //ordenar pelo valor decrescente
+                    veiculosRepository.veiculos.sort(Comparator.comparing(VeiculoEntity::getPrecoCompra).reversed());
+                    precoOrdemCrescente = true;
+                }else{
+                    //ordenar pelo valor crescente
+                    veiculosRepository.veiculos.sort(Comparator.comparing(VeiculoEntity::getPrecoCompra));
+                    precoOrdemCrescente = false;
+                }
                 break;
             case 5:
                 return 0;
