@@ -12,8 +12,10 @@ public class CarroEntity extends VeiculoEntity{
 		this.cavalos = cavalos;
 		this.passageiros = passageiros;
 	}
-    //construtor sobrecarregado
-	public CarroEntity() {}
+
+    public CarroEntity(){
+
+    }
 
     //getters and setters
 	public Float getCavalos() {
@@ -31,6 +33,11 @@ public class CarroEntity extends VeiculoEntity{
 	public void setPassageiros(Integer passageiros) {
 		this.passageiros = passageiros;
 	}
+
+    @Override
+    public String tipoVeiculo() {
+        return "Carro";
+    }
 
     //método toString()
 	@Override

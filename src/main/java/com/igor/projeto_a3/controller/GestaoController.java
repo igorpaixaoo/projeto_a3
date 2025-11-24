@@ -9,9 +9,7 @@ import main.java.com.igor.projeto_a3.repository.VeiculosRepository;
 import main.java.com.igor.projeto_a3.repository.VendasRepository;
 import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
-import java.awt.*;
 import java.text.NumberFormat;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
@@ -175,18 +173,16 @@ public class GestaoController {
         if(!veiculosRepository.veiculos.isEmpty()){
             System.out.println("VEÍCULOS DISPONÍVEIS");
             //formatando para ficar em formato tabular com o printf()
-            System.out.printf("%-20s %-15s %-15s %-10s%n",
-                    "MODELO", "MARCA", "PLACA", "PREÇO COMPRA");
-            System.out.println("-------------------------------------------------------------------");
-
-            //ADICIONAR PREÇO DA COMPRA (que está na lista ComprasRepository)
+            System.out.printf("%-20s %-15s %-15s %-20s %-15s%n",
+                    "MODELO", "MARCA", "PLACA", "PREÇO COMPRA", "TIPO");
+            System.out.println("------------------------------------------------------------------------------------");
 
             //foreach na lista de veiculos
             for(VeiculoEntity v : veiculosRepository.veiculos) {
                 //formatando os atributos com o printf
-                System.out.printf("%-20s %-15s %-15s %-10s%n", v.getModelo(), v.getMarca(), v.getPlaca(),
-                        nf.format(v.getPrecoCompra()));
-                System.out.println("-------------------------------------------------------------------");
+                System.out.printf("%-20s %-15s %-15s %-20s %-15s%n", v.getModelo(), v.getMarca(), v.getPlaca(),
+                        nf.format(v.getPrecoCompra()), v.tipoVeiculo());
+                System.out.println("------------------------------------------------------------------------------------");
             }
             System.out.println("Ordenar: 1 - Modelo, 2 - Marca, 3 - Placa, 4 - Preço, 5 - Voltar");
 

@@ -11,8 +11,6 @@ public class RegistrarComprasController {
 
     private GestaoController gestaoController;
 
-    Scanner sc = new Scanner(System.in);
-
     public RegistrarComprasController(GestaoController gestaoController) {
         this.gestaoController = gestaoController;
     }

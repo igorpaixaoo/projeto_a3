@@ -11,8 +11,10 @@ public class MotoEntity extends VeiculoEntity{
 		this.carenagem = carenagem;
 		this.cilindragem = cilindragem;
 	}
-	
-	public MotoEntity() {}
+
+    public MotoEntity(){
+
+    }
 
 	public String getCarenagem() {
 		return carenagem;
@@ -29,8 +31,13 @@ public class MotoEntity extends VeiculoEntity{
 	public void setCilindragem(Float cilindragem) {
 		this.cilindragem = cilindragem;
 	}
-	
-	@Override
+
+    @Override
+    public String tipoVeiculo() {
+        return "Moto";
+    }
+
+    @Override
 	public String toString() {
 		return "Modelo: " + modelo + ", Cor: " + cor + ", Marca: " + marca + ", Placa: " + placa + ", KM: "
 				+ km + ", Preco: " + ", Carenagem: " + carenagem + ", Cilindragem: " + cilindragem;

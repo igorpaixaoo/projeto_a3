@@ -55,7 +55,7 @@ public class FinanceiroController {
 
         bancoRepository.setCapital(capital);
 
-        return capital;
+        return bancoRepository.getCapital();
 
     }
 

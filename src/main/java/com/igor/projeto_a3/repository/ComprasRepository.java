@@ -1,6 +1,5 @@
 package main.java.com.igor.projeto_a3.repository;
 
-import main.java.com.igor.projeto_a3.controller.RegistrarComprasController;
 import main.java.com.igor.projeto_a3.entity.VeiculoEntity;
 
 import java.util.ArrayList;

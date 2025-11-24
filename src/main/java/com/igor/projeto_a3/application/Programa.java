@@ -9,7 +9,6 @@ import main.java.com.igor.projeto_a3.entity.CarroEntity;
 import main.java.com.igor.projeto_a3.entity.MotoEntity;
 import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Programa {
@@ -20,6 +19,8 @@ public class Programa {
     GestaoController gestao = new GestaoController();
     //objeto FinanceiroController (com as regras de negócio)
     FinanceiroController fc = new FinanceiroController(gestao);
+
+    String cor = ColorTextEnum.COR_VERDE.cor();
 
     Scanner sc = new Scanner(System.in);
 
@@ -96,18 +97,18 @@ public class Programa {
     public void menuFinanceiro(){
         System.out.println("     FINANCEIRO");
 
-        //bug cor
-        String cor = ColorTextEnum.COR_VERDE.cor();
+        double capital = fc.capital();
+
         if(fc.bancoRepository.getCapital() <= 1000){
             cor = ColorTextEnum.COR_VERMELHO.cor();
-        }
+        }else cor = ColorTextEnum.COR_VERDE.cor();
 
         System.out.println("Faturamento: " + ColorTextEnum.COR_VERDE.cor() + gestao.nf.format(fc.faturamentoTotal())
                 + ColorTextEnum.COR_RESET.cor());
         System.out.println("Lucro Total: " + ColorTextEnum.COR_VERDE.cor() + gestao.nf.format(fc.lucroVendido())
                 + ColorTextEnum.COR_RESET.cor());
         //System.out.println("Lucro ultima venda: " + gestao.nf.format(fc.calcularLucroVeiculo(gestao)));
-        System.out.println("Capital disponível: " + cor + gestao.nf.format(fc.capital())
+        System.out.println("Capital disponível: " + cor + gestao.nf.format(capital)
                 + ColorTextEnum.COR_RESET.cor());
 
     }

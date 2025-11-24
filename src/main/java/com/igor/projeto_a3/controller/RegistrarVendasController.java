@@ -18,10 +18,9 @@ public class RegistrarVendasController {
         this.gestaoController = gestaoController;
     }
 
-    public RegistrarVendasController() {}
-
     //método vender veiculo
     public void venderVeiculo(){
+        //listando os veículos disponíveis
         gestaoController.listar();
 
         //criando uma variável do "tipo" VeiculoEntity atribuído ao método buscar() retornando um VeiculoEntity
@@ -31,11 +30,8 @@ public class RegistrarVendasController {
             System.out.println("\nValor da venda: ");
             //settando o preço da venda e incrementando o contador de veiculos
             veiculoBuscado.setPrecoVenda(gestaoController.sc.nextDouble());
-
             //incrementando o contador de veiculos vendidos a cada venda
             gestaoController.vendasRepository.contVeiculosVendidos++;
-
-            //verificando se o veículo buscado não é nulo
             //adicionando o veículo vendido na lista de vendas
             gestaoController.vendasRepository.adicionarVeiculoVendido(veiculoBuscado);
             //removendo o veículo buscado da lista de veículos gerais

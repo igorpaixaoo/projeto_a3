@@ -13,8 +13,8 @@ public class CaminhaoEntity extends VeiculoEntity{
 		this.toneladas = toneladas;
 		this.cabine = cabine;
 	}
-    //construtor sobrecarregado
-	public CaminhaoEntity() {}
+
+    public CaminhaoEntity() {}
 
     //getters and setters
 	public Float getToneladas() {
@@ -32,6 +32,11 @@ public class CaminhaoEntity extends VeiculoEntity{
 	public void setCabine(String cabine) {
 		this.cabine = cabine;
 	}
+
+    @Override
+    public String tipoVeiculo() {
+        return "Caminhão";
+    }
 
     //toString()
 	@Override

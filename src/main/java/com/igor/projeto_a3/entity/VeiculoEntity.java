@@ -8,7 +8,7 @@ public abstract class VeiculoEntity{
 	protected String marca;
 	protected String placa;
 	protected Double km;
-    private Double precoVenda, precoCompra;
+    protected Double precoVenda, precoCompra;
     protected Boolean vendido;
 
     //construtor
@@ -20,10 +20,12 @@ public abstract class VeiculoEntity{
 		this.km = km;
         this.precoCompra = precoCompra;
 	}
-	//construtor sobrecarregado
-	public VeiculoEntity() {
-		
-	}
+
+    public VeiculoEntity(){
+
+    }
+
+    public abstract String tipoVeiculo();
 
     //getters and setters
 	public String getModelo() {
