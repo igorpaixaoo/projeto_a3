@@ -20,7 +20,8 @@ public class Programa {
     //objeto FinanceiroController (com as regras de negócio)
     FinanceiroController fc = new FinanceiroController(gestao);
 
-    String cor = ColorTextEnum.COR_VERDE.cor();
+    private static final int CODE_LINES = 1089;
+    private String cor = ColorTextEnum.COR_VERDE.cor();
 
     Scanner sc = new Scanner(System.in);
 
@@ -45,7 +46,7 @@ public class Programa {
         CaminhaoEntity ce2 = new CaminhaoEntity("Tector 9-190", "Branca", "Iveco", "MAX-3333", 20.0, 450000.0, 10000.0f, "Grande");
         gestao.veiculosRepository.adicionarVeiculo(ce2);
 
-        System.out.println(ColorTextEnum.COR_BRANCO.cor() + "        GERENCIADOR DE COMPRA E VENDA DE VEÍCULOS"
+        System.out.println(ColorTextEnum.COR_BRANCO.cor() + "        GERENCIADOR DE COMPRA E VENDA DE VEÍCULOS " + CODE_LINES
                 + ColorTextEnum.COR_RESET.cor());
         run();
     }
