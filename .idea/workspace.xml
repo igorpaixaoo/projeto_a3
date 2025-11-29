@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a19f2223-0d10-475e-9e6a-f4c2c3fa14f1" name="Changes" comment="bug RegistrarVendasController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/application/Programa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/application/Programa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/repository/ComprasRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/projeto_a3.1/main/java/com/igor/projeto_a3/repository/ComprasRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/application/Programa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/controller/RegistrarVendasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/service/ImpostoCreditoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/igor/projeto_a3/service/ImpostoCreditoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -141,7 +143,11 @@
       <workItem from="1764200429344" duration="2036000" />
       <workItem from="1764246316799" duration="1377000" />
       <workItem from="1764365906555" duration="5000" />
-      <workItem from="1764366017948" duration="2491000" />
+      <workItem from="1764366017948" duration="2944000" />
+      <workItem from="1764376283872" duration="691000" />
+      <workItem from="1764377022548" duration="60000" />
+      <workItem from="1764377190042" duration="12000" />
+      <workItem from="1764377313468" duration="1503000" />
     </task>
     <task id="LOCAL-00001" summary="bug RegistrarVendasController">
       <option name="closed" value="true" />

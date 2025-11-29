@@ -7,8 +7,6 @@ import main.java.com.igor.projeto_a3.service.ImpostoPixService;
 import main.java.com.igor.projeto_a3.service.ImpostoService;
 import main.java.com.igor.projeto_a3.util.ColorTextEnum;
 
-import java.text.NumberFormat;
-
 /**
  * @author Igor
  */
@@ -25,7 +23,7 @@ public class RegistrarVendasController {
     //método para selecionar o tipo de pagamento, consequentemente retornando a classe que implementa ImpostoService
     public ImpostoService selecionarTipoPagamento(){
 
-        System.out.println("Selecionando tipo de pagamento  1-PIX/Dinheiro  2-Débito  3-Crédito");
+        System.out.println("Selecionando tipo de pagamento:  1-PIX/Dinheiro  2-Débito  3-Crédito");
         int opcao = gestaoController.sc.nextInt();
         //opções
         switch (opcao){
@@ -59,28 +57,28 @@ public class RegistrarVendasController {
             System.out.println("Deseja trocar o tipo de pagamento? S/N");
             char opcao = gestaoController.sc.next().charAt(0);
 
+            //se for igual a 'S', impostoService recebe uma nova dependência
             if(Character.toString(opcao).equalsIgnoreCase("S")){
-                selecionarTipoPagamento();
-            }else if(Character.toString(opcao).equalsIgnoreCase("N")){
-                //preço de venda com imposto
-                Double precoVendaImposto = precoVenda + impostoService.calcularImposto(precoVenda);
-
-                //settando o preço da venda e incrementando o contador de veiculos
-                veiculoBuscado.setPrecoVenda(precoVendaImposto);
-                //incrementando o contador de veiculos vendidos a cada venda
-                gestaoController.vendasRepository.contVeiculosVendidos++;
-                //adicionando o veículo vendido na lista de vendas
-                gestaoController.vendasRepository.adicionarVeiculoVendido(veiculoBuscado);
-                //removendo o veículo buscado da lista de veículos gerais
-                gestaoController.veiculosRepository.veiculos.remove(veiculoBuscado);
-
-                System.out.println("\n");
-                System.out.println(ColorTextEnum.COR_VERDE.cor() + "Veículo vendido com sucesso!" + ColorTextEnum.COR_RESET.cor());
-
+                impostoService = selecionarTipoPagamento();
             }
+            //preço de venda com imposto
+            Double precoVendaImposto = precoVenda + impostoService.calcularImposto(precoVenda);
+
+            //settando o preço da venda e incrementando o contador de veiculos
+            veiculoBuscado.setPrecoVenda(precoVendaImposto);
+            //incrementando o contador de veiculos vendidos a cada venda
+            gestaoController.vendasRepository.contVeiculosVendidos++;
+            //adicionando o veículo vendido na lista de vendas
+            gestaoController.vendasRepository.adicionarVeiculoVendido(veiculoBuscado);
+            //removendo o veículo buscado da lista de veículos gerais
+            gestaoController.veiculosRepository.veiculos.remove(veiculoBuscado);
+
+            System.out.println("\n");
+            System.out.println(ColorTextEnum.COR_VERDE.cor() + "Veículo vendido com sucesso!" + ColorTextEnum.COR_RESET.cor());
 
         }
     }
+
     //método listar veiculos vendidos
     public void listarVeiculosVendidos(){
         //verificando se a lista não está vazia
@@ -89,13 +87,11 @@ public class RegistrarVendasController {
             System.out.printf("%-20s %-15s %-10s %-15s%n",
                     "MODELO", "MARCA", "PLACA", "VALOR DA VENDA");
             System.out.println("-----------------------------------------------------------------");
-            //formatação de números
-            NumberFormat nf = NumberFormat.getCurrencyInstance();
 
             //foreach na lista de veiculos
             for(VeiculoEntity v : gestaoController.vendasRepository.vendas) {
                 //formatando os atributos com o printf
-                System.out.printf("%-20s %-15s %-10s %-15s%n", v.getModelo(), v.getMarca(), v.getPlaca(), nf.format(v.getPrecoVenda()));
+                System.out.printf("%-20s %-15s %-10s %-15s%n", v.getModelo(), v.getMarca(), v.getPlaca(), gestaoController.nf.format(v.getPrecoVenda()));
                 System.out.println("-----------------------------------------------------------------");
             }
             System.out.println(gestaoController.vendasRepository.getContVeiculosVendidos() + " veículo(s) vendido(s)");

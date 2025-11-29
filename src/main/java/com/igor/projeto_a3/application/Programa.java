@@ -20,7 +20,7 @@ public class Programa {
     //objeto FinanceiroController (com as regras de negócio)
     FinanceiroController fc = new FinanceiroController(gestao);
 
-    private static final int CODE_LINES = 1089;
+    private static final int CODE_LINES = 1209;
     private String cor = ColorTextEnum.COR_VERDE.cor();
 
     Scanner sc = new Scanner(System.in);
@@ -46,11 +46,10 @@ public class Programa {
         CaminhaoEntity ce2 = new CaminhaoEntity("Tector 9-190", "Branca", "Iveco", "MAX-3333", 20.0, 450000.0, 10000.0f, "Grande");
         gestao.veiculosRepository.adicionarVeiculo(ce2);
 
-        System.out.println(ColorTextEnum.COR_BRANCO.cor() + "        GERENCIADOR DE COMPRA E VENDA DE VEÍCULOS " + CODE_LINES
+        System.out.println(ColorTextEnum.COR_BRANCO.cor() + "\n        GERENCIADOR DE COMPRA E VENDA DE VEÍCULOS " + CODE_LINES
                 + ColorTextEnum.COR_RESET.cor());
         run();
     }
-
 
     public void run(){
         //enquanto for true, executa
@@ -111,7 +110,6 @@ public class Programa {
         //System.out.println("Lucro ultima venda: " + gestao.nf.format(fc.calcularLucroVeiculo(gestao)));
         System.out.println("Capital disponível: " + cor + gestao.nf.format(capital)
                 + ColorTextEnum.COR_RESET.cor());
-
     }
 
     private void menuVender() {
